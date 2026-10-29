@@ -1,9 +1,9 @@
 import {Composition, Folder} from 'remotion';
 import {SchoolVisit} from './SchoolVisit';
 import {TitleCard} from './TitleCard';
-import {VisitScene} from './VisitScene';
+import {StationCaption} from './StationCaption';
 
-// 74s of scenes minus seven 15-frame transitions.
+// 77s of scenes minus seven 15-frame transitions.
 export const RemotionRoot = () => (
   <>
     <Composition
@@ -12,12 +12,12 @@ export const RemotionRoot = () => (
       width={1080}
       height={1920}
       fps={30}
-      durationInFrames={2115}
+      durationInFrames={2205}
     />
     <Folder name="Scenes">
       <Composition
-        id="VisitScene"
-        component={VisitScene}
+        id="StationCaption"
+        component={StationCaption}
         width={1080}
         height={1920}
         fps={30}
@@ -26,9 +26,6 @@ export const RemotionRoot = () => (
           step: 'المحطة ١',
           title: 'استقبال الطلاب',
           subtitle: 'رحّب فريق الهيئة بطلاب المدرسة في جولة تعريفية ممتعة',
-          photo1: '',
-          photo2: '',
-          style: {backgroundColor: '#000000'},
         }}
       />
       <Composition
