@@ -4,6 +4,7 @@ import {fade} from '@remotion/transitions/fade';
 import {slide} from '@remotion/transitions/slide';
 import {staticFile, Track, useVideoConfig} from 'remotion';
 import {StationCaption} from './StationCaption';
+import {StillPhoto} from './StillPhoto';
 import {TitleCard} from './TitleCard';
 
 const OVERLAY = 'linear-gradient(170deg, rgba(215,25,32,0.62), rgba(120,10,15,0.85))';
@@ -40,11 +41,12 @@ export const SchoolVisit = () => {
         />
       </TransitionSeries.Sequence>
       <TransitionSeries.Transition presentation={slide({direction: 'from-left'})} timing={linearTiming({durationInFrames: 15})} />
-      <TransitionSeries.Sequence name="Programs" durationInFrames={11 * fps}>
+      <TransitionSeries.Sequence name="Programs" durationInFrames={13.5 * fps}>
         <Track name="Programs shots">
           <Video name="Lined up" src={staticFile('clips/IMG_1921.mp4')} trimBefore={1 * fps} durationInFrames={3 * fps} volume={0.4} />
           <Video name="Classroom 1" src={staticFile('clips/IMG_1935.mp4')} from={3 * fps} trimBefore={1 * fps} durationInFrames={4 * fps} volume={0.4} />
           <Video name="Classroom 2" src={staticFile('clips/IMG_1942.mp4')} from={7 * fps} trimBefore={1 * fps} durationInFrames={4 * fps} volume={0.4} />
+          <StillPhoto name="Smiling student" src="clips/smiling-girl.jpg" fit="cover" from={11 * fps} durationInFrames={2.5 * fps} />
         </Track>
         <StationCaption
           name="Programs caption"
@@ -81,10 +83,12 @@ export const SchoolVisit = () => {
         />
       </TransitionSeries.Sequence>
       <TransitionSeries.Transition presentation={slide({direction: 'from-left'})} timing={linearTiming({durationInFrames: 15})} />
-      <TransitionSeries.Sequence name="Simulation room" durationInFrames={12 * fps}>
+      <TransitionSeries.Sequence name="Simulation room" durationInFrames={14 * fps}>
         <Track name="Simulation shots">
-          <Video name="Simulation 1" src={staticFile('clips/IMG_1938.mp4')} trimBefore={2 * fps} durationInFrames={6 * fps} volume={0.4} />
-          <Video name="Simulation 2" src={staticFile('clips/IMG_1953.mp4')} from={6 * fps} durationInFrames={6 * fps} volume={0.4} />
+          <Video name="Simulation 1" src={staticFile('clips/IMG_1938.mp4')} trimBefore={2 * fps} durationInFrames={4 * fps} volume={0.4} />
+          <StillPhoto name="Accident scene group" src="clips/group-row.jpg" fit="contain" from={4 * fps} durationInFrames={3 * fps} />
+          <StillPhoto name="Accident scene close" src="clips/group-close.jpg" fit="cover" from={7 * fps} durationInFrames={2.5 * fps} />
+          <Video name="Simulation 2" src={staticFile('clips/IMG_1953.mp4')} from={9.5 * fps} durationInFrames={4.5 * fps} volume={0.4} />
         </Track>
         <StationCaption
           name="Simulation caption"
