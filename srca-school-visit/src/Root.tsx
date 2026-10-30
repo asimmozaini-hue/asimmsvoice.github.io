@@ -3,7 +3,7 @@ import {SchoolVisit} from './SchoolVisit';
 import {TitleCard} from './TitleCard';
 import {StationCaption} from './StationCaption';
 
-// 77s of scenes minus seven 15-frame transitions.
+// 71s of scenes minus six 15-frame transitions.
 export const RemotionRoot = () => (
   <>
     <Composition
@@ -12,7 +12,7 @@ export const RemotionRoot = () => (
       width={1080}
       height={1920}
       fps={30}
-      durationInFrames={2205}
+      durationInFrames={2040}
     />
     <Folder name="Scenes">
       <Composition

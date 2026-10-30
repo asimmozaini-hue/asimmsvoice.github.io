@@ -8,7 +8,7 @@ SR = 44100
 BPM = 70
 BEAT = 60 / BPM
 BAR = 4 * BEAT
-LENGTH = 74.0
+LENGTH = float(sys.argv[2]) if len(sys.argv) > 2 else 74.0
 rng = np.random.default_rng(7)
 
 def hz(midi):
@@ -18,10 +18,13 @@ def hz(midi):
 CHORDS = {
     'Am': [57, 60, 64], 'F': [53, 57, 60], 'C': [48, 52, 55], 'G': [55, 59, 62],
 }
+# Intro and build, then an eight-bar lift, then two bars resolving on C, fitted to LENGTH.
+TOTAL_BARS = int(np.ceil(LENGTH / BAR))
+LIFT_START = TOTAL_BARS - 10
 PROGRESSION = (
-    ['Am', 'F', 'C', 'G'] * 3          # bars 0-11: intro and build
-    + ['F', 'G', 'Am', 'C', 'F', 'G', 'C', 'C']  # bars 12-19: lift
-    + ['C', 'C']                       # bars 20-21: resolve
+    (['Am', 'F', 'C', 'G'] * 4)[:LIFT_START]
+    + ['F', 'G', 'Am', 'C', 'F', 'G', 'C', 'C']
+    + ['C', 'C']
 )
 
 n = int(LENGTH * SR)
@@ -75,9 +78,9 @@ for bar, name in enumerate(PROGRESSION):
     if start >= LENGTH:
         break
     notes = CHORDS[name]
-    build = min(bar / 12, 1.0)
-    lift = 1.0 if 12 <= bar < 20 else 0.0
-    final = bar >= 20
+    build = min(bar / LIFT_START, 1.0)
+    lift = 1.0 if LIFT_START <= bar < LIFT_START + 8 else 0.0
+    final = bar >= LIFT_START + 8
 
     # Piano arpeggio in eighth notes, one octave up.
     if not final:
@@ -85,7 +88,7 @@ for bar, name in enumerate(PROGRESSION):
             midi = notes[idx % 3] + 12 + (12 if idx >= 12 else 0)
             add(piano(midi), start + step * BEAT / 2, gain=0.16, pan=0.25 if step % 2 else -0.25)
     else:
-        if bar == 20:
+        if bar == LIFT_START + 8:
             for i, m in enumerate(notes + [notes[0] + 12, notes[1] + 12]):
                 add(piano(m + 12, dur=6), start + i * 0.09, gain=0.2)
 
@@ -101,7 +104,7 @@ for bar, name in enumerate(PROGRESSION):
     # Bass and heartbeat from bar 4.
     if bar >= 4:
         add(bass(notes[0] - 12, BAR + 0.4), start, gain=0.22 + 0.06 * lift)
-    if 8 <= bar < 20:
+    if LIFT_START - 4 <= bar < LIFT_START + 8:
         for b in (0, 2):
             add(heartbeat(), start + b * BEAT, gain=0.32 + 0.12 * lift)
             add(heartbeat() * 0.6, start + b * BEAT + 0.28, gain=0.32 + 0.12 * lift)

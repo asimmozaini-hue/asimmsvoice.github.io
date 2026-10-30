@@ -4,6 +4,7 @@ import { fade } from "@remotion/transitions/fade";
 import { slide } from "@remotion/transitions/slide";
 import { staticFile, Track, useVideoConfig } from "remotion";
 import { StationCaption } from "./StationCaption";
+import { StillPhoto } from "./StillPhoto";
 import { TitleCard } from "./TitleCard";
 
 const OVERLAY =
@@ -114,7 +115,7 @@ export const SchoolVisit = () => {
           presentation={slide({ direction: "from-left" })}
           timing={linearTiming({ durationInFrames: 15 })}
         />
-        <TransitionSeries.Sequence name="First aid" durationInFrames={12 * fps}>
+        <TransitionSeries.Sequence name="First aid" durationInFrames={17 * fps}>
           <Track name="First aid shots">
             <Video
               name="Instructor demo"
@@ -127,7 +128,22 @@ export const SchoolVisit = () => {
               src={staticFile("clips/IMG_1945.mp4")}
               from={3 * fps}
               trimBefore={1 * fps}
-              durationInFrames={9 * fps}
+              durationInFrames={7 * fps}
+              volume={0.12}
+            />
+            <Video
+              name="Training room 1"
+              src={staticFile("clips/IMG_1938.mp4")}
+              from={10 * fps}
+              trimBefore={2 * fps}
+              durationInFrames={3.5 * fps}
+              volume={0.12}
+            />
+            <Video
+              name="Training room 2"
+              src={staticFile("clips/IMG_1953.mp4")}
+              from={13.5 * fps}
+              durationInFrames={3.5 * fps}
               volume={0.12}
             />
           </Track>
@@ -175,57 +191,32 @@ export const SchoolVisit = () => {
           />
         </TransitionSeries.Sequence>
         <TransitionSeries.Transition
-          presentation={slide({ direction: "from-left" })}
-          timing={linearTiming({ durationInFrames: 15 })}
-        />
-        <TransitionSeries.Sequence
-          name="Simulation room"
-          durationInFrames={12 * fps}
-        >
-          <Track name="Simulation shots">
-            <Video
-              name="Simulation 1"
-              src={staticFile("clips/IMG_1938.mp4")}
-              trimBefore={2 * fps}
-              durationInFrames={6 * fps}
-              volume={0.12}
-            />
-            <Video
-              name="Simulation 2"
-              src={staticFile("clips/IMG_1953.mp4")}
-              from={6 * fps}
-              durationInFrames={6 * fps}
-              volume={0.12}
-            />
-          </Track>
-          <StationCaption
-            name="Simulation caption"
-            step="المحطة ٥"
-            title="غرفة المحاكاة"
-            subtitle="تجربة عملية لمواقف إسعافية في بيئة تدريب آمنة"
-          />
-        </TransitionSeries.Sequence>
-        <TransitionSeries.Transition
           presentation={fade()}
           timing={linearTiming({ durationInFrames: 15 })}
         />
-        <TransitionSeries.Sequence name="Gifts" durationInFrames={6 * fps}>
-          <Video
-            name="Group lineup"
-            src={staticFile("clips/IMG_1919.mp4")}
-            durationInFrames={6 * fps}
-            volume={0.12}
-          />
-          <TitleCard
-            name="Gifts card"
-            kicker="ختام الزيارة"
-            title="هدايا تذكارية"
+        <TransitionSeries.Sequence name="Gifts" durationInFrames={7 * fps}>
+          <Track name="Gifts shots">
+            <StillPhoto
+              name="Handing a gift"
+              src="clips/gifts-1.jpg"
+              fit="cover"
+              focus="62% center"
+              durationInFrames={3.5 * fps}
+            />
+            <StillPhoto
+              name="Gift table"
+              src="clips/gifts-2.jpg"
+              fit="cover"
+              focus="72% center"
+              from={3.5 * fps}
+              durationInFrames={3.5 * fps}
+            />
+          </Track>
+          <StationCaption
+            name="Gifts caption"
+            step="ختام الزيارة"
+            title="توزيع الهدايا التذكارية"
             subtitle="تسليم الطلاب هدايا تذكارية تخليداً لهذا اليوم"
-            footer=""
-            style={{
-              background:
-                "linear-gradient(170deg, rgba(215,25,32,0.55), rgba(120,10,15,0.75))",
-            }}
           />
         </TransitionSeries.Sequence>
         <TransitionSeries.Transition
