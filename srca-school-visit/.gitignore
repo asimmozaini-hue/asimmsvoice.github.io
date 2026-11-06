@@ -8,3 +8,5 @@ out
 
 # Visit footage (children) stays local, never in the public repo
 public/clips
+# Personal photo and third-party dance clip stay local
+public/zeer
