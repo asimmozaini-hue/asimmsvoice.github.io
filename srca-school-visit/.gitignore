@@ -10,3 +10,5 @@ out
 public/clips
 # Personal photo and third-party dance clip stay local
 public/zeer
+# MEDGO raw footage stays local
+public/medgo

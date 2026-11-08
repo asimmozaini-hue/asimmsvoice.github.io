@@ -2,6 +2,7 @@ import {Composition, Folder} from 'remotion';
 import {SchoolVisit} from './SchoolVisit';
 import {TitleCard} from './TitleCard';
 import {ZeerTribute} from './zeer/ZeerTribute';
+import {MedgoFilm} from './medgo/MedgoFilm';
 import {StationCaption} from './StationCaption';
 
 // 71s of scenes minus six 15-frame transitions.
@@ -14,6 +15,14 @@ export const RemotionRoot = () => (
       height={1920}
       fps={30}
       durationInFrames={2040}
+    />
+    <Composition
+      id="MedgoFilm"
+      component={MedgoFilm}
+      width={1080}
+      height={1920}
+      fps={30}
+      durationInFrames={3420}
     />
     <Composition
       id="ZeerTribute"
