@@ -12,3 +12,6 @@ public/clips
 public/zeer
 # MEDGO raw footage stays local
 public/medgo
+# Brand frames taken from the first Crash Course video
+public/cc/*.png
+public/cc/clips
