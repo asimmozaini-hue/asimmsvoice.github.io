@@ -22,8 +22,8 @@ INTRO = [('0942', 0.0, 2.6, 0.5, 'push'), ('0943', 2.6, 4.6, 0.5, 'drift'), ('09
 # (clip, half-hits, rate, move)
 WELCOME = [
     ('0931', 2, 0.6, 'punch'), ('0933', 2, 0.5, 'push'), ('0937', 2, 0.6, 'whip-left'), ('0938', 2, 0.6, 'push'),
-    ('0941', 2, 0.6, 'whip-right'), ('0967', 2, 0.6, 'push'), ('0940', 2, 0.6, 'drift'), ('0970', 2, 0.6, 'punch'),
-    ('0939', 2, 0.6, 'push'), ('0963', 2, 0.6, 'drift'), ('0964', 2, 0.6, 'push'), ('0976', 2, 0.6, 'pull'), ('0971', 2, 0.6, 'push'),
+    ('0941', 2, 0.6, 'whip-right'), ('0967', 2, 0.6, 'push'), ('0086', 2, 0.6, 'drift'), ('0970', 2, 0.6, 'punch'),
+    ('0939', 2, 0.6, 'push'), ('0963', 2, 0.6, 'drift'), ('0089', 2, 0.6, 'push'), ('0976', 2, 0.6, 'pull'), ('0971', 2, 0.6, 'push'),
     ('0935', 1, 0.8, 'punch'), ('0950', 1, 0.8, 'punch'), ('0954', 1, 0.8, 'punch'), ('0956', 1, 0.8, 'punch'),
     ('0960', 1, 0.8, 'punch'), ('0961', 1, 0.8, 'punch'), ('0962', 2, 0.5, 'push'),
 ]
@@ -41,12 +41,14 @@ EXAMS = [
 COMPETITION = [(c, 1, 1.0, m) for c, m in [
     ('0163', 'punch'), ('0164', 'whip-left'), ('0165', 'punch'), ('0166', 'whip-right'), ('0993', 'punch'), ('0994', 'punch'),
     ('0002', 'whip-left'), ('0004', 'punch'), ('0009', 'punch'), ('0023', 'whip-right'), ('0024', 'punch'), ('0025', 'punch'),
-    ('0026', 'whip-left'), ('0028', 'punch'), ('0032', 'punch'), ('0033', 'whip-right'), ('0039', 'punch'), ('0051', 'punch'),
-    ('0052', 'whip-left'), ('0055', 'punch'), ('0056', 'punch'), ('0072', 'whip-right'), ('0082', 'punch'), ('0108', 'punch'),
-    ('0110', 'whip-left'), ('0117', 'punch'), ('0142', 'punch'), ('0159', 'whip-right'),
+    ('0026', 'whip-left'), ('0028', 'punch'), ('0032', 'punch'), ('0033', 'whip-right'),
 ]]
-CEREMONY_START = 132  # half-hits
-SNAPS = [('0097', 3, 0.9, -3), ('0098', 3, 1.0, 2.5), ('0100', 3, 1.0, -2), ('0102', 3, 0.9, 3)]
+CEREMONY_START = 120  # half-hits
+# (clip, half-hits, in-point, freeze after, tilt): each freezes as the certificate is raised.
+SNAPS = [
+    ('0095', 3, 0.40, 1.2, -3), ('0097', 3, 0.33, 1.2, 2.5), ('0098', 3, 0.90, 1.2, -2), ('0099', 3, 0.80, 1.2, 3),
+    ('0100', 3, 0.50, 1.2, -2.5), ('0101', 3, 0.55, 1.2, 2), ('0102', 3, 4.00, 1.2, -3),
+]
 
 lines, sfx, used = [], [], []
 
@@ -72,17 +74,18 @@ assert pos == CEREMONY_START, pos
 shot('0091', k(pos), k(pos + 2), 0.6, 'push')
 pos += 2
 snaps = []
-for c, n, snap_at, tilt in SNAPS:
+for c, n, trim, snap_at, tilt in SNAPS:
     used.append(c)
     f0, f1 = fr(k(pos)), fr(k(pos + n))
-    trim = max(0.05, (dur[c] - (f1 - f0) / FPS) / 2)
     snaps.append(f'        <PhotoSnap name="Snap {c}" src="cc/clips/{c}.mp4" trim={{{trim:.2f}}} snapAt={{{snap_at}}} tilt={{{tilt}}} from={{{f0}}} durationInFrames={{{f1 - f0}}} />')
     sfx.append(('shutter', k(pos) + snap_at - 0.03, 0.9))
     pos += n
+shot('0096', k(pos), k(pos + 3), 0.6, 'push')
+pos += 3
 assert pos == 146, pos
 assert len(used) == len(set(used)), 'repeated clip'
 
-for t in (A, k(34), k(104), k(132)):
+for t in (A, k(34), k(104), k(120)):
     sfx.append(('impact', t - 0.05, 0.85))
     sfx.append(('riser', t - 2.0, 0.5))
 sfx.append(('glitch', k(8), 0.7))
@@ -107,7 +110,7 @@ out += lines
 out.append("      </Track>\n      <Track name=\"Certificates\">")
 out += snaps
 out.append("      </Track>\n      <Track name=\"Flashes\">")
-for i, t in enumerate([A, k(34), k(104), k(132)]):
+for i, t in enumerate([A, k(34), k(104), k(120)]):
     out.append(f'        <Flash name="Flash {i + 1}" from={{{fr(t)}}} durationInFrames={{8}} />')
 out.append(f"""      </Track>
       <LogoBug name="Logo" from={{0}} durationInFrames={{{fr(k(146))}}} />
@@ -118,7 +121,7 @@ out.append(f"""      </Track>
       </Track>
       <Track name="HUD">
         <ExamTimer name="Exam timer" label="EXAM" seconds={{240}} from={{{fr(k(34))}}} durationInFrames={{{fr(k(104)) - fr(k(34))}}} />
-        <ExamTimer name="Final timer" label="FINAL" seconds={{{round(k(132) - k(104), 2)}}} from={{{fr(k(104))}}} durationInFrames={{{fr(k(132)) - fr(k(104))}}} />
+        <ExamTimer name="Final timer" label="FINAL" seconds={{{round(k(120) - k(104), 2)}}} from={{{fr(k(104))}}} durationInFrames={{{fr(k(120)) - fr(k(104))}}} />
       </Track>
       <EndSlate name="End slate" from={{{fr(k(146))}}} durationInFrames={{{fr(END) - fr(k(146))}}} />
       <Audio
