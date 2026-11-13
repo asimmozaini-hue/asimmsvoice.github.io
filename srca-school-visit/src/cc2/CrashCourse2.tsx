@@ -4,6 +4,7 @@ import {interpolate, staticFile, Track, useVideoConfig} from 'remotion';
 import {Flash} from '../medgo/Fx';
 import {Shot} from '../medgo/Shot';
 import {EndSlate, ExamTimer, GlitchTitle, HeartbeatBadge, LogoBug, Typewriter} from './Brand';
+import {EcgSweep, Mosaic, Slam, Triptych, Viewfinder} from './Graphics';
 import {PhotoSnap} from './PhotoSnap';
 
 export const CrashCourse2 = () => {
@@ -40,71 +41,83 @@ export const CrashCourse2 = () => {
         <Shot name="0992" src="cc/clips/0992.mp4" from={987} durationInFrames={41} trim={2.19} rate={0.50} motion="push" />
         <Shot name="0003" src="cc/clips/0003.mp4" from={1028} durationInFrames={42} trim={0.98} rate={0.60} motion="whip-left" />
         <Shot name="0029" src="cc/clips/0029.mp4" from={1070} durationInFrames={41} trim={2.07} rate={0.60} motion="push" />
-        <Shot name="0031" src="cc/clips/0031.mp4" from={1111} durationInFrames={41} trim={1.19} rate={0.50} motion="push" />
-        <Shot name="0022" src="cc/clips/0022.mp4" from={1152} durationInFrames={42} trim={1.92} rate={0.60} motion="drift" />
-        <Shot name="0109" src="cc/clips/0109.mp4" from={1194} durationInFrames={41} trim={2.44} rate={0.60} motion="push" />
-        <Shot name="0111" src="cc/clips/0111.mp4" from={1235} durationInFrames={42} trim={0.78} rate={0.50} motion="pull" />
-        <Shot name="0158" src="cc/clips/0158.mp4" from={1277} durationInFrames={41} trim={0.75} rate={0.60} motion="push" />
-        <Shot name="0081" src="cc/clips/0081.mp4" from={1318} durationInFrames={41} trim={1.55} rate={0.60} motion="whip-right" />
-        <Shot name="0083" src="cc/clips/0083.mp4" from={1359} durationInFrames={42} trim={0.98} rate={0.60} motion="push" />
-        <Shot name="0011" src="cc/clips/0011.mp4" from={1401} durationInFrames={41} trim={0.81} rate={0.60} motion="drift" />
-        <Shot name="0019" src="cc/clips/0019.mp4" from={1442} durationInFrames={41} trim={1.01} rate={0.60} motion="push" />
-        <Shot name="0017" src="cc/clips/0017.mp4" from={1483} durationInFrames={42} trim={2.88} rate={0.60} motion="pull" />
-        <Shot name="0036" src="cc/clips/0036.mp4" from={1525} durationInFrames={41} trim={1.98} rate={0.60} motion="drift" />
-        <Shot name="0042" src="cc/clips/0042.mp4" from={1566} durationInFrames={42} trim={0.84} rate={0.60} motion="push" />
-        <Shot name="0043" src="cc/clips/0043.mp4" from={1608} durationInFrames={20} trim={0.67} rate={0.80} motion="punch" />
-        <Shot name="0951" src="cc/clips/0951.mp4" from={1628} durationInFrames={21} trim={1.07} rate={0.80} motion="punch" />
-        <Shot name="0048" src="cc/clips/0048.mp4" from={1649} durationInFrames={41} trim={1.50} rate={0.60} motion="push" />
-        <Shot name="0050" src="cc/clips/0050.mp4" from={1690} durationInFrames={42} trim={2.33} rate={0.60} motion="whip-left" />
-        <Shot name="0122" src="cc/clips/0122.mp4" from={1732} durationInFrames={41} trim={3.71} rate={0.60} motion="push" />
-        <Shot name="0124" src="cc/clips/0124.mp4" from={1773} durationInFrames={42} trim={1.10} rate={0.60} motion="pull" />
-        <Shot name="0128" src="cc/clips/0128.mp4" from={1815} durationInFrames={41} trim={1.65} rate={0.60} motion="drift" />
-        <Shot name="0133" src="cc/clips/0133.mp4" from={1856} durationInFrames={41} trim={0.97} rate={0.60} motion="push" />
-        <Shot name="0141" src="cc/clips/0141.mp4" from={1897} durationInFrames={42} trim={1.22} rate={0.60} motion="push" />
-        <Shot name="0143" src="cc/clips/0143.mp4" from={1939} durationInFrames={41} trim={0.59} rate={0.60} motion="pull" />
-        <Shot name="0010" src="cc/clips/0010.mp4" from={1980} durationInFrames={42} trim={0.49} rate={0.60} motion="push" />
-        <Shot name="0021" src="cc/clips/0021.mp4" from={2022} durationInFrames={41} trim={0.74} rate={0.60} motion="drift" />
-        <Shot name="0073" src="cc/clips/0073.mp4" from={2063} durationInFrames={41} trim={1.84} rate={0.50} motion="push" />
-        <Shot name="0074" src="cc/clips/0074.mp4" from={2104} durationInFrames={42} trim={1.20} rate={0.60} motion="pull" />
-        <Shot name="0075" src="cc/clips/0075.mp4" from={2146} durationInFrames={41} trim={2.04} rate={0.60} motion="push" />
-        <Shot name="0107" src="cc/clips/0107.mp4" from={2187} durationInFrames={41} trim={0.97} rate={0.60} motion="drift" />
-        <Shot name="0116" src="cc/clips/0116.mp4" from={2228} durationInFrames={42} trim={1.04} rate={0.60} motion="push" />
-        <Shot name="0118" src="cc/clips/0118.mp4" from={2270} durationInFrames={41} trim={1.27} rate={0.60} motion="pull" />
-        <Shot name="0137" src="cc/clips/0137.mp4" from={2311} durationInFrames={42} trim={1.17} rate={0.60} motion="drift" />
-        <Shot name="0160" src="cc/clips/0160.mp4" from={2353} durationInFrames={41} trim={1.95} rate={0.60} motion="push" />
-        <Shot name="0163" src="cc/clips/0163.mp4" from={2394} durationInFrames={21} trim={0.18} rate={1.00} motion="punch" />
-        <Shot name="0164" src="cc/clips/0164.mp4" from={2415} durationInFrames={20} trim={1.50} rate={1.00} motion="whip-left" />
-        <Shot name="0165" src="cc/clips/0165.mp4" from={2435} durationInFrames={21} trim={1.16} rate={1.00} motion="punch" />
-        <Shot name="0166" src="cc/clips/0166.mp4" from={2456} durationInFrames={21} trim={0.94} rate={1.00} motion="whip-right" />
-        <Shot name="0993" src="cc/clips/0993.mp4" from={2477} durationInFrames={20} trim={1.97} rate={1.00} motion="punch" />
-        <Shot name="0994" src="cc/clips/0994.mp4" from={2497} durationInFrames={21} trim={4.28} rate={1.00} motion="punch" />
-        <Shot name="0002" src="cc/clips/0002.mp4" from={2518} durationInFrames={21} trim={2.27} rate={1.00} motion="whip-left" />
-        <Shot name="0004" src="cc/clips/0004.mp4" from={2539} durationInFrames={21} trim={1.18} rate={1.00} motion="punch" />
-        <Shot name="0009" src="cc/clips/0009.mp4" from={2560} durationInFrames={20} trim={1.05} rate={1.00} motion="punch" />
-        <Shot name="0023" src="cc/clips/0023.mp4" from={2580} durationInFrames={21} trim={0.98} rate={1.00} motion="whip-right" />
-        <Shot name="0024" src="cc/clips/0024.mp4" from={2601} durationInFrames={21} trim={0.89} rate={1.00} motion="punch" />
-        <Shot name="0025" src="cc/clips/0025.mp4" from={2622} durationInFrames={20} trim={1.49} rate={1.00} motion="punch" />
-        <Shot name="0026" src="cc/clips/0026.mp4" from={2642} durationInFrames={21} trim={0.87} rate={1.00} motion="whip-left" />
-        <Shot name="0028" src="cc/clips/0028.mp4" from={2663} durationInFrames={21} trim={2.27} rate={1.00} motion="punch" />
-        <Shot name="0032" src="cc/clips/0032.mp4" from={2684} durationInFrames={20} trim={0.98} rate={1.00} motion="punch" />
-        <Shot name="0033" src="cc/clips/0033.mp4" from={2704} durationInFrames={21} trim={2.60} rate={1.00} motion="whip-right" />
-        <Shot name="0091" src="cc/clips/0091.mp4" from={2725} durationInFrames={41} trim={2.14} rate={0.60} motion="push" />
-        <Shot name="0096" src="cc/clips/0096.mp4" from={3201} durationInFrames={62} trim={0.61} rate={0.60} motion="push" />
+        <Shot name="0054" src="cc/clips/0054.mp4" from={1111} durationInFrames={41} trim={1.87} rate={0.60} motion="drift" />
+        <Shot name="0031" src="cc/clips/0031.mp4" from={1152} durationInFrames={42} trim={1.19} rate={0.50} motion="push" />
+        <Shot name="0081" src="cc/clips/0081.mp4" from={1194} durationInFrames={41} trim={1.55} rate={0.60} motion="whip-right" />
+        <Shot name="0045" src="cc/clips/0045.mp4" from={1235} durationInFrames={42} trim={1.02} rate={0.60} motion="push" />
+        <Shot name="0011" src="cc/clips/0011.mp4" from={1277} durationInFrames={41} trim={0.81} rate={0.60} motion="drift" />
+        <Shot name="0019" src="cc/clips/0019.mp4" from={1318} durationInFrames={41} trim={1.01} rate={0.60} motion="punch" />
+        <Shot name="0036" src="cc/clips/0036.mp4" from={1359} durationInFrames={42} trim={1.97} rate={0.60} motion="whip-left" />
+        <Shot name="0043" src="cc/clips/0043.mp4" from={1401} durationInFrames={20} trim={0.67} rate={0.80} motion="punch" />
+        <Shot name="0951" src="cc/clips/0951.mp4" from={1421} durationInFrames={21} trim={1.07} rate={0.80} motion="punch" />
+        <Shot name="0048" src="cc/clips/0048.mp4" from={1442} durationInFrames={41} trim={1.50} rate={0.60} motion="push" />
+        <Shot name="0050" src="cc/clips/0050.mp4" from={1483} durationInFrames={42} trim={2.33} rate={0.60} motion="whip-right" />
+        <Shot name="0122" src="cc/clips/0122.mp4" from={1525} durationInFrames={41} trim={3.71} rate={0.60} motion="push" />
+        <Shot name="0988" src="cc/clips/0988.mp4" from={1566} durationInFrames={42} trim={0.89} rate={0.60} motion="drift" />
+        <Shot name="0128" src="cc/clips/0128.mp4" from={1608} durationInFrames={41} trim={1.65} rate={0.60} motion="punch" />
+        <Shot name="0133" src="cc/clips/0133.mp4" from={1649} durationInFrames={41} trim={0.97} rate={0.60} motion="push" />
+        <Shot name="0010" src="cc/clips/0010.mp4" from={1690} durationInFrames={42} trim={0.49} rate={0.60} motion="whip-left" />
+        <Shot name="0116" src="cc/clips/0116.mp4" from={1732} durationInFrames={41} trim={1.05} rate={0.60} motion="push" />
+        <Shot name="0158" src="cc/clips/0158.mp4" from={1773} durationInFrames={42} trim={0.74} rate={0.60} motion="punch" />
+        <Shot name="0109" src="cc/clips/0109.mp4" from={1815} durationInFrames={41} trim={2.44} rate={0.60} motion="drift" />
+        <Shot name="0075" src="cc/clips/0075.mp4" from={1856} durationInFrames={41} trim={2.04} rate={0.60} motion="push" />
+        <Shot name="0163" src="cc/clips/0163.mp4" from={1897} durationInFrames={21} trim={0.18} rate={1.00} motion="punch" />
+        <Shot name="0164" src="cc/clips/0164.mp4" from={1918} durationInFrames={21} trim={1.48} rate={1.00} motion="whip-left" />
+        <Shot name="0165" src="cc/clips/0165.mp4" from={1939} durationInFrames={20} trim={1.18} rate={1.00} motion="punch" />
+        <Shot name="0166" src="cc/clips/0166.mp4" from={1959} durationInFrames={21} trim={0.94} rate={1.00} motion="whip-right" />
+        <Triptych name="Split 0993-0994-0002" a="cc/clips/0993.mp4" b="cc/clips/0994.mp4" c="cc/clips/0002.mp4" trimA={1.60} trimB={3.93} trimC={1.92} from={1980} durationInFrames={42} />
+        <Shot name="0004" src="cc/clips/0004.mp4" from={2022} durationInFrames={20} trim={1.20} rate={1.00} motion="punch" />
+        <Shot name="0009" src="cc/clips/0009.mp4" from={2042} durationInFrames={21} trim={1.04} rate={1.00} motion="whip-left" />
+        <Shot name="0023" src="cc/clips/0023.mp4" from={2063} durationInFrames={10} trim={1.17} rate={1.00} motion="punch" />
+        <Shot name="0024" src="cc/clips/0024.mp4" from={2073} durationInFrames={11} trim={1.05} rate={1.00} motion="punch" />
+        <Shot name="0025" src="cc/clips/0025.mp4" from={2084} durationInFrames={20} trim={1.49} rate={1.00} motion="whip-right" />
+        <Shot name="0026" src="cc/clips/0026.mp4" from={2104} durationInFrames={21} trim={0.87} rate={1.00} motion="punch" />
+        <Triptych name="Split 0028-0032-0033" a="cc/clips/0028.mp4" b="cc/clips/0032.mp4" c="cc/clips/0033.mp4" trimA={1.93} trimB={0.63} trimC={2.27} from={2125} durationInFrames={41} />
+        <Shot name="0052" src="cc/clips/0052.mp4" from={2166} durationInFrames={21} trim={1.22} rate={1.00} motion="whip-left" />
+        <Shot name="0055" src="cc/clips/0055.mp4" from={2187} durationInFrames={21} trim={1.95} rate={1.00} motion="punch" />
+        <Shot name="0056" src="cc/clips/0056.mp4" from={2208} durationInFrames={20} trim={1.21} rate={1.00} motion="punch" />
+        <Shot name="0072" src="cc/clips/0072.mp4" from={2228} durationInFrames={21} trim={1.12} rate={1.00} motion="whip-right" />
+        <Shot name="0082" src="cc/clips/0082.mp4" from={2249} durationInFrames={21} trim={2.11} rate={1.00} motion="punch" />
+        <Shot name="0108" src="cc/clips/0108.mp4" from={2270} durationInFrames={21} trim={1.93} rate={1.00} motion="punch" />
+        <Shot name="0110" src="cc/clips/0110.mp4" from={2291} durationInFrames={20} trim={1.01} rate={1.00} motion="whip-left" />
+        <Shot name="0117" src="cc/clips/0117.mp4" from={2311} durationInFrames={21} trim={1.34} rate={1.00} motion="punch" />
+        <Shot name="0142" src="cc/clips/0142.mp4" from={2332} durationInFrames={21} trim={1.28} rate={1.00} motion="punch" />
+        <Shot name="0159" src="cc/clips/0159.mp4" from={2353} durationInFrames={20} trim={1.24} rate={1.00} motion="whip-right" />
+        <Shot name="0039" src="cc/clips/0039.mp4" from={2373} durationInFrames={21} trim={1.92} rate={1.00} motion="punch" />
+        <Shot name="0091" src="cc/clips/0091.mp4" from={2394} durationInFrames={41} trim={2.14} rate={0.60} motion="punch" />
+        <Shot name="0168" src="cc/clips/0168.mp4" from={2725} durationInFrames={41} trim={1.17} rate={0.60} motion="push" />
       </Track>
       <Track name="Certificates">
-        <PhotoSnap name="Snap 0095" src="cc/clips/0095.mp4" trim={0.40} snapAt={1.2} tilt={-3} from={2766} durationInFrames={63} />
-        <PhotoSnap name="Snap 0097" src="cc/clips/0097.mp4" trim={0.33} snapAt={1.2} tilt={2.5} from={2829} durationInFrames={62} />
-        <PhotoSnap name="Snap 0098" src="cc/clips/0098.mp4" trim={0.90} snapAt={1.2} tilt={-2} from={2891} durationInFrames={62} />
-        <PhotoSnap name="Snap 0099" src="cc/clips/0099.mp4" trim={0.80} snapAt={1.2} tilt={3} from={2953} durationInFrames={62} />
-        <PhotoSnap name="Snap 0100" src="cc/clips/0100.mp4" trim={0.50} snapAt={1.2} tilt={-2.5} from={3015} durationInFrames={62} />
-        <PhotoSnap name="Snap 0101" src="cc/clips/0101.mp4" trim={0.55} snapAt={1.2} tilt={2} from={3077} durationInFrames={62} />
-        <PhotoSnap name="Snap 0102" src="cc/clips/0102.mp4" trim={4.00} snapAt={1.2} tilt={-3} from={3139} durationInFrames={62} />
+        <PhotoSnap name="Snap 0095" src="cc/clips/0095.mp4" trim={0.90} snapAt={0.7} tilt={3} from={2435} durationInFrames={42} />
+        <PhotoSnap name="Snap 0097" src="cc/clips/0097.mp4" trim={0.83} snapAt={0.7} tilt={-3} from={2477} durationInFrames={41} />
+        <PhotoSnap name="Snap 0098" src="cc/clips/0098.mp4" trim={1.40} snapAt={0.7} tilt={3} from={2518} durationInFrames={42} />
+        <PhotoSnap name="Snap 0099" src="cc/clips/0099.mp4" trim={1.30} snapAt={0.7} tilt={-3} from={2560} durationInFrames={41} />
+        <PhotoSnap name="Snap 0100" src="cc/clips/0100.mp4" trim={1.00} snapAt={0.7} tilt={3} from={2601} durationInFrames={41} />
+        <PhotoSnap name="Snap 0101" src="cc/clips/0101.mp4" trim={1.05} snapAt={0.7} tilt={-3} from={2642} durationInFrames={42} />
+        <PhotoSnap name="Snap 0102" src="cc/clips/0102.mp4" trim={4.50} snapAt={0.7} tilt={3} from={2684} durationInFrames={41} />
+        <PhotoSnap name="Snap 0171" src="cc/clips/0171.mp4" trim={0.80} snapAt={0.7} tilt={3} from={2766} durationInFrames={42} />
+        <PhotoSnap name="Snap 0173" src="cc/clips/0173.mp4" trim={1.30} snapAt={0.7} tilt={-3} from={2808} durationInFrames={41} />
+        <PhotoSnap name="Snap 0174" src="cc/clips/0174.mp4" trim={1.50} snapAt={0.7} tilt={3} from={2849} durationInFrames={42} />
+        <PhotoSnap name="Snap 0175" src="cc/clips/0175.mp4" trim={0.00} snapAt={0.6} tilt={-3} from={2891} durationInFrames={41} />
+        <PhotoSnap name="Snap 0176" src="cc/clips/0176.mp4" trim={2.00} snapAt={0.7} tilt={3} from={2932} durationInFrames={41} />
+        <PhotoSnap name="Snap 0177" src="cc/clips/0177.mp4" trim={1.20} snapAt={0.7} tilt={-3} from={2973} durationInFrames={42} />
+        <PhotoSnap name="Snap 0178" src="cc/clips/0178.mp4" trim={1.10} snapAt={0.7} tilt={3} from={3015} durationInFrames={41} />
+        <PhotoSnap name="Snap 0179" src="cc/clips/0179.mp4" trim={0.80} snapAt={0.7} tilt={-3} from={3056} durationInFrames={42} />
       </Track>
+      <Mosaic name="Certificate wall" photos={["cc/stills/0095.jpg", "cc/stills/0097.jpg", "cc/stills/0098.jpg", "cc/stills/0099.jpg", "cc/stills/0100.jpg", "cc/stills/0101.jpg", "cc/stills/0102.jpg", "cc/stills/0171.jpg", "cc/stills/0173.jpg", "cc/stills/0174.jpg", "cc/stills/0175.jpg", "cc/stills/0176.jpg", "cc/stills/0177.jpg", "cc/stills/0178.jpg", "cc/stills/0179.jpg"]} title="أبطال" sub="crash course 2" from={3098} durationInFrames={165} />
+      <Viewfinder name="Viewfinder" from={945} durationInFrames={952} />
       <Track name="Flashes">
         <Flash name="Flash 1" from={242} durationInFrames={8} />
         <Flash name="Flash 2" from={945} durationInFrames={8} />
-        <Flash name="Flash 3" from={2394} durationInFrames={8} />
-        <Flash name="Flash 4" from={2725} durationInFrames={8} />
+        <Flash name="Flash 3" from={1897} durationInFrames={8} />
+        <Flash name="Flash 4" from={2394} durationInFrames={8} />
+        <Flash name="Flash 5" from={3098} durationInFrames={8} />
+      </Track>
+      <Track name="ECG sweeps">
+        <EcgSweep name="ECG 1" from={230} durationInFrames={24} />
+        <EcgSweep name="ECG 2" from={933} durationInFrames={24} />
+        <EcgSweep name="ECG 3" from={2382} durationInFrames={24} />
+        <EcgSweep name="ECG 4" from={3086} durationInFrames={24} />
       </Track>
       <LogoBug name="Logo" from={0} durationInFrames={3263} />
       <Track name="Titles">
@@ -112,9 +125,18 @@ export const CrashCourse2 = () => {
         <GlitchTitle name="Glitch title" arabic="تنفذ برنامج" latin="crash course 2" from={407} durationInFrames={166} />
         <HeartbeatBadge name="Badge" label="crash course 2" from={1152} durationInFrames={207} />
       </Track>
+      <Track name="Slams">
+        <Slam name="Slam READY?" text="READY?" accent="#2ad4ff" from={863} durationInFrames={26} />
+        <Slam name="Slam GO!" text="GO!" accent="#E1251B" from={945} durationInFrames={26} />
+        <Slam name="Slam SPEED" text="SPEED" accent="#E1251B" from={1897} durationInFrames={26} />
+        <Slam name="Slam PRECISION" text="PRECISION" accent="#2ad4ff" from={2022} durationInFrames={26} />
+        <Slam name="Slam TEAMWORK" text="TEAMWORK" accent="#E1251B" from={2146} durationInFrames={26} />
+        <Slam name="Slam PRESSURE" text="PRESSURE" accent="#ffb02a" from={2270} durationInFrames={26} />
+        <Slam name="Slam لحظة التتويج" text="لحظة التتويج" accent="#E1251B" from={2394} durationInFrames={42} />
+      </Track>
       <Track name="HUD">
-        <ExamTimer name="Exam timer" label="EXAM" seconds={240} from={945} durationInFrames={1449} />
-        <ExamTimer name="Final timer" label="FINAL" seconds={11.04} from={2394} durationInFrames={331} />
+        <ExamTimer name="Exam timer" label="EXAM" seconds={240} from={945} durationInFrames={952} />
+        <ExamTimer name="Final timer" label="FINAL" seconds={16.55} from={1897} durationInFrames={497} />
       </Track>
       <EndSlate name="End slate" from={3263} durationInFrames={157} />
       <Audio
@@ -122,36 +144,69 @@ export const CrashCourse2 = () => {
         src={staticFile('medgo/score.mp3')}
         volume={(f) => 0.85 * interpolate(f, [0, 8, durationInFrames - 45, durationInFrames - 1], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
       />
-
-        <Audio name="riser 1" src={staticFile('cc/sfx/riser.mp3')} from={182} volume={0.5} />
-        <Audio name="impact 2" src={staticFile('cc/sfx/impact.mp3')} from={240} volume={0.85} />
-        <Audio name="whoosh1 3" src={staticFile('cc/sfx/whoosh1.mp3')} from={321} volume={0.55} />
-        <Audio name="whoosh2 4" src={staticFile('cc/sfx/whoosh2.mp3')} from={401} volume={0.6} />
-        <Audio name="whoosh2 5" src={staticFile('cc/sfx/whoosh2.mp3')} from={404} volume={0.55} />
-        <Audio name="glitch 6" src={staticFile('cc/sfx/glitch.mp3')} from={407} volume={0.7} />
-        <Audio name="riser 7" src={staticFile('cc/sfx/riser.mp3')} from={885} volume={0.5} />
-        <Audio name="impact 8" src={staticFile('cc/sfx/impact.mp3')} from={944} volume={0.85} />
-        <Audio name="whoosh3 9" src={staticFile('cc/sfx/whoosh3.mp3')} from={1025} volume={0.55} />
-        <Audio name="whoosh3 10" src={staticFile('cc/sfx/whoosh3.mp3')} from={1148} volume={0.5} />
-        <Audio name="whoosh1 11" src={staticFile('cc/sfx/whoosh1.mp3')} from={1314} volume={0.55} />
-        <Audio name="whoosh2 12" src={staticFile('cc/sfx/whoosh2.mp3')} from={1687} volume={0.55} />
-        <Audio name="riser 13" src={staticFile('cc/sfx/riser.mp3')} from={2334} volume={0.5} />
-        <Audio name="impact 14" src={staticFile('cc/sfx/impact.mp3')} from={2392} volume={0.85} />
-        <Audio name="whoosh3 15" src={staticFile('cc/sfx/whoosh3.mp3')} from={2411} volume={0.55} />
-        <Audio name="whoosh1 16" src={staticFile('cc/sfx/whoosh1.mp3')} from={2452} volume={0.55} />
-        <Audio name="whoosh2 17" src={staticFile('cc/sfx/whoosh2.mp3')} from={2515} volume={0.55} />
-        <Audio name="whoosh3 18" src={staticFile('cc/sfx/whoosh3.mp3')} from={2577} volume={0.55} />
-        <Audio name="whoosh1 19" src={staticFile('cc/sfx/whoosh1.mp3')} from={2639} volume={0.55} />
-        <Audio name="riser 20" src={staticFile('cc/sfx/riser.mp3')} from={2665} volume={0.5} />
-        <Audio name="whoosh2 21" src={staticFile('cc/sfx/whoosh2.mp3')} from={2701} volume={0.55} />
-        <Audio name="impact 22" src={staticFile('cc/sfx/impact.mp3')} from={2724} volume={0.85} />
-        <Audio name="shutter 23" src={staticFile('cc/sfx/shutter.mp3')} from={2802} volume={0.9} />
-        <Audio name="shutter 24" src={staticFile('cc/sfx/shutter.mp3')} from={2864} volume={0.9} />
-        <Audio name="shutter 25" src={staticFile('cc/sfx/shutter.mp3')} from={2926} volume={0.9} />
-        <Audio name="shutter 26" src={staticFile('cc/sfx/shutter.mp3')} from={2988} volume={0.9} />
-        <Audio name="shutter 27" src={staticFile('cc/sfx/shutter.mp3')} from={3050} volume={0.9} />
-        <Audio name="shutter 28" src={staticFile('cc/sfx/shutter.mp3')} from={3112} volume={0.9} />
-        <Audio name="shutter 29" src={staticFile('cc/sfx/shutter.mp3')} from={3174} volume={0.9} />
+      <Audio name="riser 1" src={staticFile('cc/sfx/riser.mp3')} from={182} volume={0.5} />
+      <Audio name="impact 2" src={staticFile('cc/sfx/impact.mp3')} from={240} volume={0.85} />
+      <Audio name="whoosh1 3" src={staticFile('cc/sfx/whoosh1.mp3')} from={321} volume={0.55} />
+      <Audio name="whoosh2 4" src={staticFile('cc/sfx/whoosh2.mp3')} from={401} volume={0.5} />
+      <Audio name="whoosh2 5" src={staticFile('cc/sfx/whoosh2.mp3')} from={404} volume={0.55} />
+      <Audio name="glitch 6" src={staticFile('cc/sfx/glitch.mp3')} from={407} volume={0.55} />
+      <Audio name="whoosh2 7" src={staticFile('cc/sfx/whoosh2.mp3')} from={857} volume={0.5} />
+      <Audio name="glitch 8" src={staticFile('cc/sfx/glitch.mp3')} from={863} volume={0.55} />
+      <Audio name="riser 9" src={staticFile('cc/sfx/riser.mp3')} from={885} volume={0.5} />
+      <Audio name="whoosh2 10" src={staticFile('cc/sfx/whoosh2.mp3')} from={939} volume={0.5} />
+      <Audio name="impact 11" src={staticFile('cc/sfx/impact.mp3')} from={944} volume={0.85} />
+      <Audio name="glitch 12" src={staticFile('cc/sfx/glitch.mp3')} from={945} volume={0.55} />
+      <Audio name="whoosh3 13" src={staticFile('cc/sfx/whoosh3.mp3')} from={1025} volume={0.55} />
+      <Audio name="whoosh1 14" src={staticFile('cc/sfx/whoosh1.mp3')} from={1190} volume={0.55} />
+      <Audio name="whoosh2 15" src={staticFile('cc/sfx/whoosh2.mp3')} from={1356} volume={0.55} />
+      <Audio name="whoosh3 16" src={staticFile('cc/sfx/whoosh3.mp3')} from={1480} volume={0.55} />
+      <Audio name="whoosh1 17" src={staticFile('cc/sfx/whoosh1.mp3')} from={1687} volume={0.55} />
+      <Audio name="riser 18" src={staticFile('cc/sfx/riser.mp3')} from={1837} volume={0.5} />
+      <Audio name="whoosh2 19" src={staticFile('cc/sfx/whoosh2.mp3')} from={1891} volume={0.5} />
+      <Audio name="impact 20" src={staticFile('cc/sfx/impact.mp3')} from={1896} volume={0.85} />
+      <Audio name="glitch 21" src={staticFile('cc/sfx/glitch.mp3')} from={1897} volume={0.55} />
+      <Audio name="whoosh2 22" src={staticFile('cc/sfx/whoosh2.mp3')} from={1914} volume={0.55} />
+      <Audio name="whoosh3 23" src={staticFile('cc/sfx/whoosh3.mp3')} from={1956} volume={0.55} />
+      <Audio name="whoosh3 24" src={staticFile('cc/sfx/whoosh3.mp3')} from={1977} volume={0.6} />
+      <Audio name="whoosh2 25" src={staticFile('cc/sfx/whoosh2.mp3')} from={2016} volume={0.5} />
+      <Audio name="glitch 26" src={staticFile('cc/sfx/glitch.mp3')} from={2022} volume={0.55} />
+      <Audio name="whoosh2 27" src={staticFile('cc/sfx/whoosh2.mp3')} from={2039} volume={0.55} />
+      <Audio name="whoosh3 28" src={staticFile('cc/sfx/whoosh3.mp3')} from={2080} volume={0.55} />
+      <Audio name="whoosh3 29" src={staticFile('cc/sfx/whoosh3.mp3')} from={2122} volume={0.6} />
+      <Audio name="whoosh2 30" src={staticFile('cc/sfx/whoosh2.mp3')} from={2140} volume={0.5} />
+      <Audio name="glitch 31" src={staticFile('cc/sfx/glitch.mp3')} from={2146} volume={0.55} />
+      <Audio name="whoosh2 32" src={staticFile('cc/sfx/whoosh2.mp3')} from={2163} volume={0.55} />
+      <Audio name="whoosh3 33" src={staticFile('cc/sfx/whoosh3.mp3')} from={2225} volume={0.55} />
+      <Audio name="whoosh2 34" src={staticFile('cc/sfx/whoosh2.mp3')} from={2264} volume={0.5} />
+      <Audio name="glitch 35" src={staticFile('cc/sfx/glitch.mp3')} from={2270} volume={0.55} />
+      <Audio name="whoosh1 36" src={staticFile('cc/sfx/whoosh1.mp3')} from={2287} volume={0.55} />
+      <Audio name="riser 37" src={staticFile('cc/sfx/riser.mp3')} from={2334} volume={0.5} />
+      <Audio name="whoosh2 38" src={staticFile('cc/sfx/whoosh2.mp3')} from={2349} volume={0.55} />
+      <Audio name="whoosh2 39" src={staticFile('cc/sfx/whoosh2.mp3')} from={2388} volume={0.5} />
+      <Audio name="impact 40" src={staticFile('cc/sfx/impact.mp3')} from={2392} volume={0.85} />
+      <Audio name="glitch 41" src={staticFile('cc/sfx/glitch.mp3')} from={2394} volume={0.55} />
+      <Audio name="shutter 42" src={staticFile('cc/sfx/shutter.mp3')} from={2455} volume={0.9} />
+      <Audio name="shutter 43" src={staticFile('cc/sfx/shutter.mp3')} from={2497} volume={0.9} />
+      <Audio name="shutter 44" src={staticFile('cc/sfx/shutter.mp3')} from={2538} volume={0.9} />
+      <Audio name="shutter 45" src={staticFile('cc/sfx/shutter.mp3')} from={2580} volume={0.9} />
+      <Audio name="shutter 46" src={staticFile('cc/sfx/shutter.mp3')} from={2621} volume={0.9} />
+      <Audio name="shutter 47" src={staticFile('cc/sfx/shutter.mp3')} from={2662} volume={0.9} />
+      <Audio name="shutter 48" src={staticFile('cc/sfx/shutter.mp3')} from={2704} volume={0.9} />
+      <Audio name="shutter 49" src={staticFile('cc/sfx/shutter.mp3')} from={2787} volume={0.9} />
+      <Audio name="shutter 50" src={staticFile('cc/sfx/shutter.mp3')} from={2828} volume={0.9} />
+      <Audio name="shutter 51" src={staticFile('cc/sfx/shutter.mp3')} from={2869} volume={0.9} />
+      <Audio name="shutter 52" src={staticFile('cc/sfx/shutter.mp3')} from={2908} volume={0.9} />
+      <Audio name="shutter 53" src={staticFile('cc/sfx/shutter.mp3')} from={2952} volume={0.9} />
+      <Audio name="shutter 54" src={staticFile('cc/sfx/shutter.mp3')} from={2993} volume={0.9} />
+      <Audio name="shutter 55" src={staticFile('cc/sfx/shutter.mp3')} from={3035} volume={0.9} />
+      <Audio name="riser 56" src={staticFile('cc/sfx/riser.mp3')} from={3038} volume={0.5} />
+      <Audio name="shutter 57" src={staticFile('cc/sfx/shutter.mp3')} from={3076} volume={0.9} />
+      <Audio name="impact 58" src={staticFile('cc/sfx/impact.mp3')} from={3096} volume={0.85} />
+      <Audio name="shutter 59" src={staticFile('cc/sfx/shutter.mp3')} from={3098} volume={0.6} />
+      <Audio name="shutter 60" src={staticFile('cc/sfx/shutter.mp3')} from={3104} volume={0.6} />
+      <Audio name="shutter 61" src={staticFile('cc/sfx/shutter.mp3')} from={3110} volume={0.6} />
+      <Audio name="shutter 62" src={staticFile('cc/sfx/shutter.mp3')} from={3116} volume={0.6} />
+      <Audio name="shutter 63" src={staticFile('cc/sfx/shutter.mp3')} from={3122} volume={0.6} />
     </>
   );
 };
