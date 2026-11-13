@@ -150,7 +150,7 @@ const HeartbeatBadgeInner = ({label}: {readonly label: string}) => {
             justifyContent: 'center',
             fontFamily: latinFont,
             fontWeight: 900,
-            fontSize: 58,
+            fontSize: 44,
             color: '#fff',
             textShadow: '0 2px 10px rgba(0,0,0,0.5)',
             opacity: interpolate(frame, [12, 20], [0, 1], clamp),

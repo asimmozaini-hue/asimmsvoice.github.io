@@ -3,6 +3,7 @@ import {SchoolVisit} from './SchoolVisit';
 import {TitleCard} from './TitleCard';
 import {ZeerTribute} from './zeer/ZeerTribute';
 import {MedgoFilm} from './medgo/MedgoFilm';
+import {CrashCourse2} from './cc2/CrashCourse2';
 import {StationCaption} from './StationCaption';
 
 // 71s of scenes minus six 15-frame transitions.
@@ -15,6 +16,14 @@ export const RemotionRoot = () => (
       height={1920}
       fps={30}
       durationInFrames={2040}
+    />
+    <Composition
+      id="CrashCourse2"
+      component={CrashCourse2}
+      width={1080}
+      height={1920}
+      fps={30}
+      durationInFrames={3420}
     />
     <Composition
       id="MedgoFilm"
