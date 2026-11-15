@@ -99,7 +99,7 @@ for a, b, src, rate, move in SHOTS:
 o.append('      </Track>')
 o.append(f'      <EcgTitle name="Title" line1="بين كل نداء استغاثة" line2="هناك ثوانٍ لا تُقاس بالوقت" line3="بل تُقاس بالحياة" beatAt={{{fr(13.6) - fr(12.7)}}} l2At={{{fr(to_out(3.09)) - fr(12.7)}}} l3At={{{fr(to_out(5.85)) - fr(12.7)}}} from={{{fr(12.7)}}} durationInFrames={{{fr(21.0) - fr(12.7)}}} />')
 o.append(f'      <CallHud name="Call" label="بلاغ وارد" number="997" from={{{fr(32.2)}}} durationInFrames={{{fr(42.6) - fr(32.2)}}} />')
-o.append(f'      <LowerThird name="Paramedic" title="مسعف" sub="هيئة الهلال الأحمر السعودي" from={{{fr(21.3)}}} durationInFrames={{{fr(26.6) - fr(21.3)}}} />')
+o.append(f'      <LowerThird name="Paramedic" title="وسام فيزو" sub="مسعف · هيئة الهلال الأحمر السعودي" from={{{fr(21.3)}}} durationInFrames={{{fr(26.6) - fr(21.3)}}} />')
 o.append(f'      <StatPanel name="Success rate" value={{55}} average={{30}} caption="نسبة النجاح في الحالات التي باشرها" averageCaption="المتوسط العالمي لاستعادة النبض خارج المستشفى" from={{{fr(51.4)}}} durationInFrames={{{fr(57.0) - fr(51.4)}}} />')
 o.append('      <Track name="Hook quotes">')
 for a, b, text in HOOK:

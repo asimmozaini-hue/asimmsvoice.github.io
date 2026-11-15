@@ -49,7 +49,7 @@ export const PulseFilm = () => {
       </Track>
       <EcgTitle name="Title" line1="بين كل نداء استغاثة" line2="هناك ثوانٍ لا تُقاس بالوقت" line3="بل تُقاس بالحياة" beatAt={27} l2At={85} l3At={167} from={381} durationInFrames={249} />
       <CallHud name="Call" label="بلاغ وارد" number="997" from={966} durationInFrames={312} />
-      <LowerThird name="Paramedic" title="مسعف" sub="هيئة الهلال الأحمر السعودي" from={639} durationInFrames={159} />
+      <LowerThird name="Paramedic" title="وسام فيزو" sub="مسعف · هيئة الهلال الأحمر السعودي" from={639} durationInFrames={159} />
       <StatPanel name="Success rate" value={55} average={30} caption="نسبة النجاح في الحالات التي باشرها" averageCaption="المتوسط العالمي لاستعادة النبض خارج المستشفى" from={1542} durationInFrames={168} />
       <Track name="Hook quotes">
         <HookLine name="في لحظة الوصول للبلاغ" text="في لحظة الوصول للبلاغ" size={100} from={18} durationInFrames={54} />
