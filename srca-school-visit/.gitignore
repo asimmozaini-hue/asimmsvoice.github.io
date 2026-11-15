@@ -16,3 +16,5 @@ public/medgo
 public/cc/*.png
 public/cc/clips
 public/cc/stills
+# Rescue documentary footage and stems stay local
+public/story
