@@ -18,11 +18,17 @@ const ShotInner = ({
   trim,
   rate,
   motion,
+  zoom = 1,
+  originX = 0.5,
+  originY = 0.5,
 }: {
   readonly src: string;
   readonly trim: number;
   readonly rate: number;
   readonly motion: Motion;
+  readonly zoom?: number;
+  readonly originX?: number;
+  readonly originY?: number;
 }) => {
   const frame = useCurrentFrame();
   const { fps, durationInFrames } = useVideoConfig();
@@ -71,21 +77,30 @@ const ShotInner = ({
         filter: blurPx > 0.1 ? `blur(${blurPx}px)` : undefined,
       }}
     >
-      <Video
-        src={staticFile(src)}
-        muted
-        trimBefore={Math.round(trim * fps)}
-        playbackRate={rate}
+      <div
         style={{
           position: "absolute",
           inset: 0,
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          scale: String(scale),
-          translate: `${x}px 0px`,
+          scale: String(zoom),
+          transformOrigin: `${originX * 100}% ${originY * 100}%`,
         }}
-      />
+      >
+        <Video
+          src={staticFile(src)}
+          muted
+          trimBefore={Math.round(trim * fps)}
+          playbackRate={rate}
+          style={{
+            position: "absolute",
+            inset: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover",
+            scale: String(scale),
+            translate: `${x}px 0px`,
+          }}
+        />
+      </div>
     </div>
   );
 };
@@ -110,6 +125,24 @@ export const Shot = Interactive.create({
       type: "number",
       default: 1,
       description: "Playback rate",
+      hiddenFromList: false,
+    },
+    zoom: {
+      type: "number",
+      default: 1,
+      description: "Crop zoom",
+      hiddenFromList: false,
+    },
+    originX: {
+      type: "number",
+      default: 0.5,
+      description: "Crop origin X (0-1)",
+      hiddenFromList: false,
+    },
+    originY: {
+      type: "number",
+      default: 0.5,
+      description: "Crop origin Y (0-1)",
       hiddenFromList: false,
     },
     motion: {

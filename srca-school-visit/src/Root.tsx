@@ -24,7 +24,7 @@ export const RemotionRoot = () => (
       width={1920}
       height={1080}
       fps={30}
-      durationInFrames={2685}
+      durationInFrames={3000}
     />
     <Composition
       id="CrashCourse2"

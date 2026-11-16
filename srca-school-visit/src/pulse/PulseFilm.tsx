@@ -10,46 +10,48 @@ export const PulseFilm = () => {
     <>
       <AbsoluteFill style={{backgroundColor: '#000'}} />
       <Track name="Shots">
-        <Shot name="89.00" src="story/anon.mp4" from={18} durationInFrames={36} trim={89.00} rate={1} motion="punch" />
-        <Shot name="104.20" src="story/anon.mp4" from={54} durationInFrames={36} trim={104.20} rate={1} motion="whip-left" />
-        <Shot name="21.60" src="story/anon.mp4" from={90} durationInFrames={36} trim={21.60} rate={1} motion="punch" />
-        <Shot name="134.40" src="story/anon.mp4" from={126} durationInFrames={36} trim={134.40} rate={1} motion="push" />
-        <Shot name="143.60" src="story/anon.mp4" from={162} durationInFrames={30} trim={143.60} rate={1} motion="punch" />
-        <Shot name="173.50" src="story/anon.mp4" from={192} durationInFrames={36} trim={173.50} rate={1} motion="whip-right" />
-        <Shot name="138.00" src="story/anon.mp4" from={240} durationInFrames={42} trim={138.00} rate={1} motion="push" />
-        <Shot name="149.95" src="story/anon.mp4" from={282} durationInFrames={36} trim={149.95} rate={0.9} motion="push" />
-        <Shot name="164.60" src="story/anon.mp4" from={333} durationInFrames={48} trim={164.60} rate={1} motion="push" />
-        <Shot name="7.95" src="story/anon.mp4" from={402} durationInFrames={66} trim={7.95} rate={0.45} motion="push" />
-        <Shot name="13.15" src="story/anon.mp4" from={468} durationInFrames={66} trim={13.15} rate={0.55} motion="drift" />
-        <Shot name="10.75" src="story/anon.mp4" from={534} durationInFrames={96} trim={10.75} rate={0.35} motion="push" />
-        <Shot name="24.44" src="story/anon.mp4" from={630} durationInFrames={180} trim={24.44} rate={1} motion="push" />
-        <Shot name="31.50" src="story/anon.mp4" from={810} durationInFrames={54} trim={31.50} rate={0.8} motion="push" />
-        <Shot name="40.50" src="story/anon.mp4" from={864} durationInFrames={36} trim={40.50} rate={1} motion="punch" />
-        <Shot name="46.00" src="story/anon.mp4" from={900} durationInFrames={36} trim={46.00} rate={0.8} motion="push" />
-        <Shot name="47.95" src="story/anon.mp4" from={936} durationInFrames={30} trim={47.95} rate={0.85} motion="whip-left" />
-        <Shot name="51.50" src="story/anon.mp4" from={966} durationInFrames={36} trim={51.50} rate={1} motion="push" />
-        <Shot name="64.80" src="story/anon.mp4" from={1002} durationInFrames={36} trim={64.80} rate={1} motion="drift" />
-        <Shot name="92.00" src="story/anon.mp4" from={1038} durationInFrames={60} trim={92.00} rate={1} motion="push" />
-        <Shot name="107.50" src="story/anon.mp4" from={1098} durationInFrames={72} trim={107.50} rate={1} motion="push" />
-        <Shot name="126.00" src="story/anon.mp4" from={1170} durationInFrames={108} trim={126.00} rate={0.8} motion="pull" />
-        <Shot name="117.60" src="story/anon.mp4" from={1278} durationInFrames={48} trim={117.60} rate={1} motion="push" />
-        <Shot name="123.00" src="story/anon.mp4" from={1326} durationInFrames={48} trim={123.00} rate={1} motion="push" />
-        <Shot name="135.80" src="story/anon.mp4" from={1374} durationInFrames={42} trim={135.80} rate={1} motion="push" />
-        <Shot name="146.90" src="story/anon.mp4" from={1416} durationInFrames={27} trim={146.90} rate={1} motion="punch" />
-        <Shot name="148.75" src="story/anon.mp4" from={1443} durationInFrames={24} trim={148.75} rate={1} motion="punch" />
-        <Shot name="131.42" src="story/anon.mp4" from={1467} durationInFrames={75} trim={131.42} rate={1} motion="push" />
-        <Shot name="62.95" src="story/anon.mp4" from={1542} durationInFrames={168} trim={62.95} rate={0.3} motion="push" />
-        <Shot name="159.00" src="story/anon.mp4" from={1710} durationInFrames={66} trim={159.00} rate={1} motion="push" />
-        <Shot name="175.60" src="story/anon.mp4" from={1776} durationInFrames={66} trim={175.60} rate={1} motion="drift" />
-        <Shot name="67.60" src="story/anon.mp4" from={1842} durationInFrames={60} trim={67.60} rate={1} motion="push" />
-        <Shot name="77.60" src="story/anon.mp4" from={1902} durationInFrames={75} trim={77.60} rate={0.7} motion="push" />
-        <Shot name="152.12" src="story/anon.mp4" from={1977} durationInFrames={183} trim={152.12} rate={1} motion="push" />
-        <Shot name="182.36" src="story/anon.mp4" from={2160} durationInFrames={198} trim={182.36} rate={1} motion="push" />
-        <Shot name="194.40" src="story/anon.mp4" from={2358} durationInFrames={327} trim={194.40} rate={1} motion="push" />
+        <Shot name="89.00" src="story/clean.mp4" from={18} durationInFrames={36} trim={89.00} rate={1} motion="punch" />
+        <Shot name="104.20" src="story/clean.mp4" from={54} durationInFrames={36} trim={104.20} rate={1} motion="whip-left" />
+        <Shot name="21.60" src="story/clean.mp4" from={90} durationInFrames={36} trim={21.60} rate={1} motion="punch" />
+        <Shot name="134.40" src="story/clean.mp4" from={126} durationInFrames={36} trim={134.40} rate={1} motion="push" zoom={1.5} originX={1.0} originY={0.0} />
+        <Shot name="143.60" src="story/clean.mp4" from={162} durationInFrames={30} trim={143.60} rate={1} motion="punch" />
+        <Shot name="173.50" src="story/clean.mp4" from={192} durationInFrames={36} trim={173.50} rate={1} motion="whip-right" />
+        <Shot name="138.00" src="story/clean.mp4" from={240} durationInFrames={42} trim={138.00} rate={1} motion="push" />
+        <Shot name="149.95" src="story/clean.mp4" from={282} durationInFrames={36} trim={149.95} rate={0.9} motion="push" />
+        <Shot name="164.60" src="story/clean.mp4" from={333} durationInFrames={48} trim={164.60} rate={1} motion="push" />
+        <Shot name="7.95" src="story/clean.mp4" from={402} durationInFrames={66} trim={7.95} rate={0.45} motion="push" />
+        <Shot name="13.15" src="story/clean.mp4" from={468} durationInFrames={66} trim={13.15} rate={0.55} motion="drift" />
+        <Shot name="10.75" src="story/clean.mp4" from={534} durationInFrames={96} trim={10.75} rate={0.35} motion="push" />
+        <Shot name="24.44" src="story/clean.mp4" from={630} durationInFrames={180} trim={24.44} rate={1} motion="push" />
+        <Shot name="31.50" src="story/clean.mp4" from={810} durationInFrames={54} trim={31.50} rate={0.8} motion="push" zoom={1.66} originX={0.0} originY={1.0} />
+        <Shot name="40.50" src="story/clean.mp4" from={864} durationInFrames={36} trim={40.50} rate={1} motion="punch" />
+        <Shot name="46.00" src="story/clean.mp4" from={900} durationInFrames={36} trim={46.00} rate={0.8} motion="push" zoom={1.42} originX={0.0} originY={1.0} />
+        <Shot name="47.95" src="story/clean.mp4" from={936} durationInFrames={30} trim={47.95} rate={0.85} motion="whip-left" />
+        <Shot name="51.50" src="story/clean.mp4" from={966} durationInFrames={36} trim={51.50} rate={1} motion="push" />
+        <Shot name="64.80" src="story/clean.mp4" from={1002} durationInFrames={36} trim={64.80} rate={1} motion="drift" />
+        <Shot name="92.00" src="story/clean.mp4" from={1038} durationInFrames={60} trim={92.00} rate={1} motion="push" />
+        <Shot name="107.50" src="story/clean.mp4" from={1098} durationInFrames={72} trim={107.50} rate={1} motion="push" />
+        <Shot name="126.00" src="story/clean.mp4" from={1170} durationInFrames={108} trim={126.00} rate={0.8} motion="pull" />
+        <Shot name="117.60" src="story/clean.mp4" from={1278} durationInFrames={48} trim={117.60} rate={1} motion="push" zoom={1.82} originX={1.0} originY={0.0} />
+        <Shot name="123.00" src="story/clean.mp4" from={1326} durationInFrames={48} trim={123.00} rate={1} motion="push" zoom={1.92} originX={1.0} originY={0.0} />
+        <Shot name="135.80" src="story/clean.mp4" from={1374} durationInFrames={42} trim={135.80} rate={1} motion="push" zoom={1.56} originX={1.0} originY={0.0} />
+        <Shot name="146.90" src="story/clean.mp4" from={1416} durationInFrames={27} trim={146.90} rate={1} motion="punch" />
+        <Shot name="148.75" src="story/clean.mp4" from={1443} durationInFrames={24} trim={148.75} rate={1} motion="punch" />
+        <Shot name="131.42" src="story/clean.mp4" from={1467} durationInFrames={75} trim={131.42} rate={1} motion="push" />
+        <Shot name="62.95" src="story/clean.mp4" from={1542} durationInFrames={168} trim={62.95} rate={0.3} motion="push" />
+        <Shot name="159.00" src="story/clean.mp4" from={1710} durationInFrames={66} trim={159.00} rate={1} motion="push" />
+        <Shot name="175.60" src="story/clean.mp4" from={1776} durationInFrames={66} trim={175.60} rate={1} motion="drift" />
+        <Shot name="67.60" src="story/clean.mp4" from={1842} durationInFrames={60} trim={67.60} rate={1} motion="push" />
+        <Shot name="77.60" src="story/clean.mp4" from={1902} durationInFrames={75} trim={77.60} rate={0.7} motion="push" />
+        <Shot name="152.12" src="story/clean.mp4" from={1977} durationInFrames={183} trim={152.12} rate={1} motion="push" />
+        <Shot name="182.36" src="story/clean.mp4" from={2160} durationInFrames={192} trim={182.36} rate={1} motion="push" />
+        <Shot name="82.00" src="story/clean.mp4" from={2352} durationInFrames={78} trim={82.00} rate={1} motion="push" />
+        <Shot name="86.75" src="story/clean.mp4" from={2430} durationInFrames={87} trim={86.75} rate={0.62} motion="push" />
+        <Shot name="194.40" src="story/clean.mp4" from={2517} durationInFrames={483} trim={194.40} rate={0.85} motion="push" />
       </Track>
       <EcgTitle name="Title" line1="بين كل نداء استغاثة" line2="هناك ثوانٍ لا تُقاس بالوقت" line3="بل تُقاس بالحياة" beatAt={27} l2At={85} l3At={167} from={381} durationInFrames={249} />
       <CallHud name="Call" label="بلاغ وارد" number="997" from={966} durationInFrames={312} />
-      <LowerThird name="Paramedic" title="وسام فيزو" sub="مسعف · هيئة الهلال الأحمر السعودي" from={639} durationInFrames={159} />
+      <LowerThird name="Paramedic" title="وسام فيزو" sub="أخصائي إسعاف وطب طوارئ" org="هيئة الهلال الأحمر السعودي بمنطقة المدينة المنورة" from={639} durationInFrames={168} />
       <StatPanel name="Success rate" value={55} average={30} caption="نسبة النجاح في الحالات التي باشرها" averageCaption="المتوسط العالمي لاستعادة النبض خارج المستشفى" from={1542} durationInFrames={168} />
       <Track name="Hook quotes">
         <HookLine name="في لحظة الوصول للبلاغ" text="في لحظة الوصول للبلاغ" size={100} from={18} durationInFrames={54} />
@@ -77,12 +79,15 @@ export const PulseFilm = () => {
         <Subtitle name="وأعرف أنه هذا المريض رح يرجع لأهله" text="وأعرف أنه هذا المريض رح يرجع لأهله" from={2093} durationInFrames={68} />
         <Subtitle name="في الحقيقة أنا ما أعتبر نفسي بطل" text="في الحقيقة أنا ما أعتبر نفسي بطل" from={2169} durationInFrames={79} />
         <Subtitle name="أنا أشوف نفسي شخص قام بواجبه" text="أنا أشوف نفسي شخص قام بواجبه" from={2248} durationInFrames={101} />
-        <Subtitle name="هو بعد الله سببٌ في عودة النبض" text="هو بعد الله سببٌ في عودة النبض" from={2364} durationInFrames={124} />
-        <Subtitle name="ورسم الابتسامة وإحياء الأمل" text="ورسم الابتسامة وإحياء الأمل" from={2488} durationInFrames={89} />
+        <Subtitle name="وأتمنى أني أكون بعد الله" text="وأتمنى أني أكون بعد الله" from={2349} durationInFrames={83} />
+        <Subtitle name="سبب في مساعدة أي شخص يحتاجني" text="سبب في مساعدة أي شخص يحتاجني" from={2432} durationInFrames={83} />
+        <Subtitle name="هو بعد الله سببٌ في عودة النبض" text="هو بعد الله سببٌ في عودة النبض" from={2515} durationInFrames={124} />
+        <Subtitle name="ورسم الابتسامة وإحياء الأمل" text="ورسم الابتسامة وإحياء الأمل" from={2639} durationInFrames={89} />
+        <Subtitle name="في قلوبٍ كادت أن تفقده" text="في قلوبٍ كادت أن تفقده" from={2728} durationInFrames={75} />
       </Track>
       <Track name="Light leaks">
         <Leak name="Leak 1" seed={3} hueShift={0} from={1692} durationInFrames={42} />
-        <Leak name="Leak 2" seed={9} hueShift={330} from={2340} durationInFrames={45} />
+        <Leak name="Leak 2" seed={9} hueShift={330} from={2496} durationInFrames={45} />
       </Track>
       <Track name="Flashes">
         <Flash name="Flash 1" from={18} durationInFrames={7} />
@@ -90,7 +95,7 @@ export const PulseFilm = () => {
         <Flash name="Flash 3" from={402} durationInFrames={7} />
         <Flash name="Flash 4" from={1710} durationInFrames={7} />
       </Track>
-      <EndCard name="End card" org="هيئة الهلال الأحمر السعودي" line="ثوانٍ تُقاس بالحياة" from={2580} durationInFrames={105} />
+      <EndCard name="End card" org="هيئة الهلال الأحمر السعودي" line="ثوانٍ تُقاس بالحياة" from={2838} durationInFrames={162} />
       <Letterbox name="Letterbox" />
       <Track name="Voices">
         <Audio name="paramedic 1" src={staticFile('story/vocals.wav')} from={18} trimBefore={2935} durationInFrames={213} volume={1.15} />
@@ -104,13 +109,12 @@ export const PulseFilm = () => {
         <Audio name="narrator 9" src={staticFile('story/vocals.wav')} from={1551} trimBefore={4066} durationInFrames={150} volume={1.15} />
         <Audio name="narrator 10" src={staticFile('story/vocals.wav')} from={1710} trimBefore={4210} durationInFrames={256} volume={1.15} />
         <Audio name="paramedic 11" src={staticFile('story/vocals.wav')} from={1977} trimBefore={4564} durationInFrames={190} volume={1.15} />
-        <Audio name="paramedic 12" src={staticFile('story/vocals.wav')} from={2169} trimBefore={5480} durationInFrames={186} volume={1.15} />
-        <Audio name="narrator 13" src={staticFile('story/vocals.wav')} from={2364} trimBefore={5826} durationInFrames={219} volume={1.15} />
+        <Audio name="paramedic and narrator 12" src={staticFile('story/vocals.wav')} from={2169} trimBefore={5480} durationInFrames={639} volume={1.15} />
       </Track>
       <Audio
         name="Score"
         src={staticFile('story/score.mp3')}
-        volume={(f) => interpolate(f, [0, 8, 12, 18, 226, 230, 236, 240, 322, 333, 380, 390, 398, 408, 599, 610, 620, 630, 809, 819, 1028, 1038, 1267, 1278, 1456, 1459, 1467, 1470, 1538, 1540, 1549, 1551, 1695, 1700, 1705, 1710, 1960, 1967, 1971, 1977, 2158, 2161, 2169, 2172, 2349, 2354, 2359, 2364, 2577, 2588, 2610, 2684], [0.0, 0.4, 0.4, 0.2, 0.2, 0.4, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.55, 0.2, 0.2, 0.55, 0.55, 0.2, 0.2, 0.55, 0.55, 0.2, 0.2, 0.2, 0.55, 0.2, 0.2, 0.55, 0.2, 0.55, 0.55, 0.2, 0.2, 0.55, 0.55, 0.2, 0.2, 0.55, 0.55, 0.2, 0.55, 0.2, 0.2, 0.55, 0.2, 0.55, 0.55, 0.2, 0.2, 0.55, 0.55, 0.0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
+        volume={(f) => interpolate(f, [0, 8, 12, 18, 226, 230, 236, 240, 322, 333, 380, 390, 398, 408, 599, 610, 620, 630, 809, 819, 1028, 1038, 1267, 1278, 1456, 1459, 1467, 1470, 1538, 1540, 1549, 1551, 1695, 1700, 1705, 1710, 1960, 1967, 1971, 1977, 2158, 2161, 2169, 2172, 2803, 2813, 2925, 2998], [0.0, 0.4, 0.4, 0.2, 0.2, 0.4, 0.4, 0.2, 0.2, 0.2, 0.2, 0.4, 0.55, 0.2, 0.2, 0.55, 0.55, 0.2, 0.2, 0.55, 0.55, 0.2, 0.2, 0.2, 0.55, 0.2, 0.2, 0.55, 0.2, 0.55, 0.55, 0.2, 0.2, 0.55, 0.55, 0.2, 0.2, 0.55, 0.55, 0.2, 0.55, 0.2, 0.2, 0.55, 0.2, 0.55, 0.55, 0.0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
       />
       <Audio name="heartbeat 1" src={staticFile('story/sfx/heartbeat.mp3')} from={0} volume={0.9} />
       <Audio name="subhit 2" src={staticFile('story/sfx/subhit.mp3')} from={16} volume={0.5} />
@@ -135,8 +139,8 @@ export const PulseFilm = () => {
       <Audio name="beep 21" src={staticFile('story/sfx/beep.mp3')} from={2005} volume={0.3} />
       <Audio name="beep 22" src={staticFile('story/sfx/beep.mp3')} from={2031} volume={0.3} />
       <Audio name="beep 23" src={staticFile('story/sfx/beep.mp3')} from={2056} volume={0.25} />
-      <Audio name="subhit 24" src={staticFile('story/sfx/subhit.mp3')} from={2580} volume={0.6} />
-      <Audio name="heartbeat 25" src={staticFile('story/sfx/heartbeat.mp3')} from={2589} volume={0.5} />
+      <Audio name="subhit 24" src={staticFile('story/sfx/subhit.mp3')} from={2838} volume={0.6} />
+      <Audio name="heartbeat 25" src={staticFile('story/sfx/heartbeat.mp3')} from={2847} volume={0.5} />
     </>
   );
 };

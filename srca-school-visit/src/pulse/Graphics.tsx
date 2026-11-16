@@ -105,7 +105,7 @@ export const Subtitle = Interactive.create({
 });
 
 // Name strap for the paramedic, sliding in from the right edge.
-const LowerThirdInner = ({title, sub}: {readonly title: string; readonly sub: string}) => {
+const LowerThirdInner = ({title, sub, org}: {readonly title: string; readonly sub: string; readonly org: string}) => {
   const frame = useCurrentFrame();
   const {durationInFrames} = useVideoConfig();
   const x = interpolate(frame, [0, 12, durationInFrames - 10, durationInFrames], [520, 0, 0, 520], {...clamp, easing: Easing.inOut(Easing.cubic)});
@@ -114,7 +114,8 @@ const LowerThirdInner = ({title, sub}: {readonly title: string; readonly sub: st
       <div style={{width: 12, backgroundColor: RED, borderRadius: 3, boxShadow: `0 0 18px ${RED}`}} />
       <div style={{backgroundColor: 'rgba(0,0,0,0.6)', padding: '14px 28px', color: '#fff', fontFamily: arabicFont}}>
         <div style={{fontWeight: 900, fontSize: 46}}>{title}</div>
-        <div style={{fontWeight: 500, fontSize: 30, opacity: 0.85, marginTop: 2}}>{sub}</div>
+        <div style={{fontWeight: 700, fontSize: 32, marginTop: 2}}>{sub}</div>
+        {org ? <div style={{fontWeight: 500, fontSize: 26, opacity: 0.8, marginTop: 4}}>{org}</div> : null}
       </div>
     </div>
   );
@@ -123,8 +124,9 @@ export const LowerThird = Interactive.create({
   Component: LowerThirdInner,
   layout: 'absolute-fill',
   schema: {
-    title: {type: 'string', default: '', description: 'Title'},
-    sub: {type: 'string', default: '', description: 'Subtitle'},
+    title: {type: 'string', default: '', description: 'Name'},
+    sub: {type: 'string', default: '', description: 'Role'},
+    org: {type: 'string', default: '', description: 'Organization'},
   },
 });
 

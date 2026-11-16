@@ -1,11 +1,11 @@
 """Writes src/pulse/PulseFilm.tsx: the 89.5s cut of the rescue documentary.
 
 Hook of the paramedic's strongest lines -> ECG title -> story -> rescue -> numbers -> meaning -> close.
-All times are seconds; picture sources come from public/story/anon.mp4 (patient's face already blurred),
-voices from public/story/vocals.wav (music removed).
+All times are seconds; picture comes from public/story/clean.mp4, voices from public/story/vocals.wav
+(music removed). The patient is never blurred: his shots are zoomed so his face stays out of frame (CROPS).
 """
 FPS = 30
-END = 89.5
+END = 100.0
 
 def fr(t):
     return round(t * FPS)
@@ -15,8 +15,8 @@ VOICES = [
     (0.6, 97.83, 104.75, 'paramedic'), (8.0, 128.66, 131.42, 'paramedic'), (11.1, 183.72, 185.28, 'paramedic'),
     (13.6, 1.17, 7.55, 'narrator'), (21.0, 24.44, 30.40, 'paramedic'), (34.6, 107.15, 114.79, 'narrator'),
     (42.6, 122.62, 128.66, 'paramedic'), (48.9, 131.42, 133.80, 'paramedic'), (51.7, 135.52, 140.32, 'narrator'),
-    (57.0, 140.32, 148.66, 'narrator'), (65.9, 152.12, 158.26, 'paramedic'), (72.3, 182.66, 188.66, 'paramedic'),
-    (78.8, 194.20, 201.30, 'narrator'),
+    (57.0, 140.32, 148.66, 'narrator'), (65.9, 152.12, 158.26, 'paramedic'),
+    (72.3, 182.66, 203.78, 'paramedic and narrator'),
 ]
 # (out start, out end, src start, rate, move)
 SHOTS = [
@@ -33,8 +33,12 @@ SHOTS = [
     (47.2, 48.1, 146.9, 1, 'punch'), (48.1, 48.9, 148.75, 1, 'punch'), (48.9, 51.4, 131.42, 1, 'push'),
     (51.4, 57.0, 62.95, 0.3, 'push'),
     (57.0, 59.2, 159.0, 1, 'push'), (59.2, 61.4, 175.6, 1, 'drift'), (61.4, 63.4, 67.6, 1, 'push'), (63.4, 65.9, 77.6, 0.7, 'push'),
-    (65.9, 72.0, 152.12, 1, 'push'), (72.0, 78.6, 182.36, 1, 'push'), (78.6, END, 194.4, 1, 'push'),
+    (65.9, 72.0, 152.12, 1, 'push'), (72.0, 78.4, 182.36, 1, 'push'), (78.4, 81.0, 82.0, 1, 'push'),
+    (81.0, 83.9, 86.75, 0.62, 'push'), (83.9, END, 194.4, 0.85, 'push'),
 ]
+# Patient shots by source start -> (zoom, origin x, origin y), from story_work/plan_crops.py: the widest window that
+# keeps his face out of frame for the whole shot.
+CROPS = {134.4: (1.5, 1.0, 0.0), 31.5: (1.66, 0.0, 1.0), 46.0: (1.42, 0.0, 1.0), 117.6: (1.82, 1.0, 0.0), 123.0: (1.92, 1.0, 0.0), 135.8: (1.56, 1.0, 0.0)}
 # (src start, src end, text): hook quotes are big and centred, the rest are subtitles.
 HOOK = [(97.83, 99.51, 'في لحظة الوصول للبلاغ'), (99.51, 100.99, 'ما في مجال للتردد'), (100.99, 103.25, 'كل ثانية لها قيمة'),
         (103.25, 104.75, 'وكل قرار يصنع الفرق'), (128.66, 131.42, 'هل حيرجع النبض لقلبه… أو لا؟'), (183.72, 185.28, 'أنا ما أعتبر نفسي بطل')]
@@ -47,7 +51,9 @@ SUBS = [
     (140.32, 143.62, 'لكن القيمة الحقيقية ليست في الرقم'), (143.62, 145.74, 'بل في كل نبضةٍ عادت'), (145.74, 148.66, 'وفي كل عائلةٍ عاد إليها الأمل'),
     (152.12, 155.98, 'أجمل شعور لما أشوف أنه النبض رجع'), (155.98, 158.26, 'وأعرف أنه هذا المريض رح يرجع لأهله'),
     (182.66, 185.28, 'في الحقيقة أنا ما أعتبر نفسي بطل'), (185.28, 188.66, 'أنا أشوف نفسي شخص قام بواجبه'),
+    (188.66, 191.44, 'وأتمنى أني أكون بعد الله'), (191.44, 194.20, 'سبب في مساعدة أي شخص يحتاجني'),
     (194.20, 198.32, 'هو بعد الله سببٌ في عودة النبض'), (198.32, 201.30, 'ورسم الابتسامة وإحياء الأمل'),
+    (201.30, 203.78, 'في قلوبٍ كادت أن تفقده'),
 ]
 
 def to_out(src, hook=False):
@@ -62,9 +68,9 @@ SFX = [('heartbeat', 0.0, 0.9), ('subhit', 0.55, 0.5), ('whoosh1', 1.68, 0.35), 
        ('whoosh1', 31.08, 0.3), ('beep', 32.3, 0.3), ('beep', 33.0, 0.3),
        ('heartbeat', 51.4, 0.6), ('subhit', 57.0, 0.55),
        ('beep', 66.0, 0.3), ('beep', 66.85, 0.3), ('beep', 67.7, 0.3), ('beep', 68.55, 0.25),
-       ('subhit', 86.0, 0.6), ('heartbeat', 86.3, 0.5)]
+       ('subhit', 94.6, 0.6), ('heartbeat', 94.9, 0.5)]
 FLASHES = [0.6, 7.6, 13.4, 57.0]
-LEAKS = [(56.4, 1.4, 3, 0), (78.0, 1.5, 9, 330)]
+LEAKS = [(56.4, 1.4, 3, 0), (83.2, 1.5, 9, 330)]
 
 # Music under voices: 0.55 when clear, 0.2 under speech (0.35s ramps). Kept as interpolate keyframes.
 pts = [(0, 0.0), (0.4, 0.4)]
@@ -95,11 +101,15 @@ export const PulseFilm = () => {
       <AbsoluteFill style={{backgroundColor: '#000'}} />
       <Track name="Shots">"""]
 for a, b, src, rate, move in SHOTS:
-    o.append(f'        <Shot name="{src:.2f}" src="story/anon.mp4" from={{{fr(a)}}} durationInFrames={{{fr(b) - fr(a)}}} trim={{{src:.2f}}} rate={{{rate}}} motion="{move}" />')
+    crop = ''
+    if src in CROPS:
+        z, ox, oy = CROPS[src]
+        crop = f' zoom={{{z}}} originX={{{ox}}} originY={{{oy}}}'
+    o.append(f'        <Shot name="{src:.2f}" src="story/clean.mp4" from={{{fr(a)}}} durationInFrames={{{fr(b) - fr(a)}}} trim={{{src:.2f}}} rate={{{rate}}} motion="{move}"{crop} />')
 o.append('      </Track>')
 o.append(f'      <EcgTitle name="Title" line1="بين كل نداء استغاثة" line2="هناك ثوانٍ لا تُقاس بالوقت" line3="بل تُقاس بالحياة" beatAt={{{fr(13.6) - fr(12.7)}}} l2At={{{fr(to_out(3.09)) - fr(12.7)}}} l3At={{{fr(to_out(5.85)) - fr(12.7)}}} from={{{fr(12.7)}}} durationInFrames={{{fr(21.0) - fr(12.7)}}} />')
 o.append(f'      <CallHud name="Call" label="بلاغ وارد" number="997" from={{{fr(32.2)}}} durationInFrames={{{fr(42.6) - fr(32.2)}}} />')
-o.append(f'      <LowerThird name="Paramedic" title="وسام فيزو" sub="مسعف · هيئة الهلال الأحمر السعودي" from={{{fr(21.3)}}} durationInFrames={{{fr(26.6) - fr(21.3)}}} />')
+o.append(f'      <LowerThird name="Paramedic" title="وسام فيزو" sub="أخصائي إسعاف وطب طوارئ" org="هيئة الهلال الأحمر السعودي بمنطقة المدينة المنورة" from={{{fr(21.3)}}} durationInFrames={{{fr(26.9) - fr(21.3)}}} />')
 o.append(f'      <StatPanel name="Success rate" value={{55}} average={{30}} caption="نسبة النجاح في الحالات التي باشرها" averageCaption="المتوسط العالمي لاستعادة النبض خارج المستشفى" from={{{fr(51.4)}}} durationInFrames={{{fr(57.0) - fr(51.4)}}} />')
 o.append('      <Track name="Hook quotes">')
 for a, b, text in HOOK:
@@ -116,7 +126,7 @@ o.append('      </Track>\n      <Track name="Flashes">')
 for i, t in enumerate(FLASHES):
     o.append(f'        <Flash name="Flash {i + 1}" from={{{fr(t)}}} durationInFrames={{7}} />')
 o.append(f"""      </Track>
-      <EndCard name="End card" org="هيئة الهلال الأحمر السعودي" line="ثوانٍ تُقاس بالحياة" from={{{fr(86.0)}}} durationInFrames={{{fr(END) - fr(86.0)}}} />
+      <EndCard name="End card" org="هيئة الهلال الأحمر السعودي" line="ثوانٍ تُقاس بالحياة" from={{{fr(94.6)}}} durationInFrames={{{fr(END) - fr(94.6)}}} />
       <Letterbox name="Letterbox" />
       <Track name="Voices">""")
 for i, (out_t, a, b, who) in enumerate(VOICES):

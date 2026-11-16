@@ -1,7 +1,7 @@
 """Composes the emotional score for the rescue film: soft piano, strings and a low drone, shaped to its sections.
 
 Run: python3 scripts/compose_pulse.py <out.wav> <length-seconds>
-Sections (seconds): hook 0-13.4, title 13.4-21, story 21-51, swell 51-66, warmth 66-78, resolve 78-end.
+Sections (seconds): hook 0-13.4, title 13.4-21, story 21-51, swell 51-66, warmth 66-86, resolve 86-end.
 """
 import sys
 import numpy as np
@@ -86,7 +86,7 @@ def section(t):
         return 'story'
     if t < 66:
         return 'swell'
-    if t < 78:
+    if t < 86:
         return 'warm'
     return 'resolve'
 
