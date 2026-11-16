@@ -83,7 +83,7 @@ export const PulseFilm = () => {
         <Subtitle name="سبب في مساعدة أي شخص يحتاجني" text="سبب في مساعدة أي شخص يحتاجني" from={2432} durationInFrames={83} />
         <Subtitle name="هو بعد الله سببٌ في عودة النبض" text="هو بعد الله سببٌ في عودة النبض" from={2515} durationInFrames={124} />
         <Subtitle name="ورسم الابتسامة وإحياء الأمل" text="ورسم الابتسامة وإحياء الأمل" from={2639} durationInFrames={89} />
-        <Subtitle name="في قلوبٍ كادت أن تفقده" text="في قلوبٍ كادت أن تفقده" from={2728} durationInFrames={75} />
+        <Subtitle name="في قلوبٍ كادت أن تفقد" text="في قلوبٍ كادت أن تفقد" from={2728} durationInFrames={75} />
       </Track>
       <Track name="Light leaks">
         <Leak name="Leak 1" seed={3} hueShift={0} from={1692} durationInFrames={42} />
