@@ -72,12 +72,12 @@ SFX = [('heartbeat', 0.0, 0.9), ('subhit', 0.55, 0.5), ('whoosh1', 1.68, 0.35), 
 FLASHES = [0.6, 7.6, 13.4, 57.0]
 LEAKS = [(56.4, 1.4, 3, 0), (83.2, 1.5, 9, 330)]
 
-# Music under voices: 0.55 when clear, 0.2 under speech (0.35s ramps). Kept as interpolate keyframes.
-pts = [(0, 0.0), (0.4, 0.4)]
+# Music under voices: 0.8 when clear, 0.3 under speech (0.35s ramps). Kept as interpolate keyframes.
+pts = [(0, 0.0), (0.4, 0.6)]
 for o, a, b, _ in VOICES:
     e = o + (b - a)
-    pts += [(o - 0.35, 0.55 if o > 13 else 0.4), (o, 0.2), (e, 0.2), (e + 0.35, 0.55 if e > 13 else 0.4)]
-pts += [(END - 2.5, 0.55), (END - 0.05, 0.0)]
+    pts += [(o - 0.35, 0.8 if o > 13 else 0.6), (o, 0.3), (e, 0.3), (e + 0.35, 0.8 if e > 13 else 0.6)]
+pts += [(END - 2.5, 0.8), (END - 0.05, 0.0)]
 pts.sort()
 clean = []
 for t, v in pts:
@@ -134,7 +134,7 @@ for i, (out_t, a, b, who) in enumerate(VOICES):
 o.append(f"""      </Track>
       <Audio
         name="Score"
-        src={{staticFile('story/score.mp3')}}
+        src={{staticFile('story/piano.mp3')}}
         volume={{(f) => interpolate(f, [{mus_in}], [{mus_out}], {{extrapolateLeft: 'clamp', extrapolateRight: 'clamp'}})}}
       />""")
 for i, (name, t, vol) in enumerate(SFX):
