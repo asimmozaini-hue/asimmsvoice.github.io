@@ -18,3 +18,5 @@ public/cc/clips
 public/cc/stills
 # Rescue documentary footage and stems stay local
 public/story
+# Evacuation drill footage stays local
+public/evac
