@@ -118,7 +118,7 @@ o.append(f"""      <Audio
       <Audio name="Announcement" src={{staticFile('evac/announce.wav')}} from={{{fr(ANN)}}} volume={{1.0}} />""")
 SFX = [('evac/sfx/alarm', 0.15, 0.5), ('evac/sfx/alarm', 3.75, 0.35), ('cc/sfx/glitch', snap(7.4), 0.7), ('cc/sfx/impact', snap(7.4), 0.8),
        ('evac/sfx/chime', snap(8.4), 0.75), ('cc/sfx/riser', snap(33.8) - 2.0, 0.55), ('cc/sfx/impact', snap(33.8), 0.9),
-       ('evac/sfx/siren', snap(43.0), 0.35), ('cc/sfx/impact', snap(43.0), 0.8), ('cc/sfx/impact', snap(51.4), 0.8),
+       ('cc/sfx/impact', snap(43.0), 0.8), ('cc/sfx/impact', snap(51.4), 0.8),
        ('cc/sfx/riser', snap(72.0) - 2.0, 0.4), ('cc/sfx/impact', snap(72.0), 0.7), ('story/sfx/subhit', snap(81.6), 0.7)]
 prev = 0.0
 for end, clip, move, rate, trim in SHOTS:

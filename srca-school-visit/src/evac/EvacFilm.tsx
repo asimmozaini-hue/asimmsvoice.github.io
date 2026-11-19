@@ -123,24 +123,23 @@ export const EvacFilm = () => {
       <Audio name="chime 5" src={staticFile('evac/sfx/chime.mp3')} from={251} volume={0.75} />
       <Audio name="riser 6" src={staticFile('cc/sfx/riser.mp3')} from={958} volume={0.55} />
       <Audio name="impact 7" src={staticFile('cc/sfx/impact.mp3')} from={1018} volume={0.9} />
-      <Audio name="siren 8" src={staticFile('evac/sfx/siren.mp3')} from={1295} volume={0.35} />
-      <Audio name="impact 9" src={staticFile('cc/sfx/impact.mp3')} from={1295} volume={0.8} />
-      <Audio name="impact 10" src={staticFile('cc/sfx/impact.mp3')} from={1540} volume={0.8} />
-      <Audio name="riser 11" src={staticFile('cc/sfx/riser.mp3')} from={2104} volume={0.4} />
-      <Audio name="impact 12" src={staticFile('cc/sfx/impact.mp3')} from={2164} volume={0.7} />
-      <Audio name="subhit 13" src={staticFile('story/sfx/subhit.mp3')} from={2450} volume={0.7} />
-      <Audio name="whoosh2 14" src={staticFile('cc/sfx/whoosh2.mp3')} from={84} volume={0.35} />
-      <Audio name="whoosh3 15" src={staticFile('cc/sfx/whoosh3.mp3')} from={145} volume={0.35} />
-      <Audio name="whoosh1 16" src={staticFile('cc/sfx/whoosh1.mp3')} from={1055} volume={0.35} />
-      <Audio name="whoosh2 17" src={staticFile('cc/sfx/whoosh2.mp3')} from={1199} volume={0.35} />
-      <Audio name="whoosh3 18" src={staticFile('cc/sfx/whoosh3.mp3')} from={1332} volume={0.35} />
-      <Audio name="whoosh1 19" src={staticFile('cc/sfx/whoosh1.mp3')} from={1403} volume={0.35} />
-      <Audio name="whoosh2 20" src={staticFile('cc/sfx/whoosh2.mp3')} from={1505} volume={0.35} />
-      <Audio name="whoosh3 21" src={staticFile('cc/sfx/whoosh3.mp3')} from={1598} volume={0.35} />
-      <Audio name="whoosh1 22" src={staticFile('cc/sfx/whoosh1.mp3')} from={1689} volume={0.35} />
-      <Audio name="whoosh2 23" src={staticFile('cc/sfx/whoosh2.mp3')} from={1782} volume={0.35} />
-      <Audio name="whoosh3 24" src={staticFile('cc/sfx/whoosh3.mp3')} from={1864} volume={0.35} />
-      <Audio name="whoosh1 25" src={staticFile('cc/sfx/whoosh1.mp3')} from={1955} volume={0.35} />
+      <Audio name="impact 8" src={staticFile('cc/sfx/impact.mp3')} from={1295} volume={0.8} />
+      <Audio name="impact 9" src={staticFile('cc/sfx/impact.mp3')} from={1540} volume={0.8} />
+      <Audio name="riser 10" src={staticFile('cc/sfx/riser.mp3')} from={2104} volume={0.4} />
+      <Audio name="impact 11" src={staticFile('cc/sfx/impact.mp3')} from={2164} volume={0.7} />
+      <Audio name="subhit 12" src={staticFile('story/sfx/subhit.mp3')} from={2450} volume={0.7} />
+      <Audio name="whoosh1 13" src={staticFile('cc/sfx/whoosh1.mp3')} from={84} volume={0.35} />
+      <Audio name="whoosh2 14" src={staticFile('cc/sfx/whoosh2.mp3')} from={145} volume={0.35} />
+      <Audio name="whoosh3 15" src={staticFile('cc/sfx/whoosh3.mp3')} from={1055} volume={0.35} />
+      <Audio name="whoosh1 16" src={staticFile('cc/sfx/whoosh1.mp3')} from={1199} volume={0.35} />
+      <Audio name="whoosh2 17" src={staticFile('cc/sfx/whoosh2.mp3')} from={1332} volume={0.35} />
+      <Audio name="whoosh3 18" src={staticFile('cc/sfx/whoosh3.mp3')} from={1403} volume={0.35} />
+      <Audio name="whoosh1 19" src={staticFile('cc/sfx/whoosh1.mp3')} from={1505} volume={0.35} />
+      <Audio name="whoosh2 20" src={staticFile('cc/sfx/whoosh2.mp3')} from={1598} volume={0.35} />
+      <Audio name="whoosh3 21" src={staticFile('cc/sfx/whoosh3.mp3')} from={1689} volume={0.35} />
+      <Audio name="whoosh1 22" src={staticFile('cc/sfx/whoosh1.mp3')} from={1782} volume={0.35} />
+      <Audio name="whoosh2 23" src={staticFile('cc/sfx/whoosh2.mp3')} from={1864} volume={0.35} />
+      <Audio name="whoosh3 24" src={staticFile('cc/sfx/whoosh3.mp3')} from={1955} volume={0.35} />
     </>
   );
 };
