@@ -16,7 +16,7 @@ const LogoBugInner = () => {
   return (
     <Img
       src={staticFile('evac/logo.png')}
-      style={{position: 'absolute', right: 60, top: 70, width: 110, opacity: interpolate(frame, [0, 15], [0, 0.95], clamp), filter: 'drop-shadow(0 2px 10px rgba(0,0,0,0.5))'}}
+      style={{position: 'absolute', left: 60, top: 70, width: 110, opacity: interpolate(frame, [0, 15], [0, 0.95], clamp), filter: 'drop-shadow(0 2px 10px rgba(0,0,0,0.5))'}}
     />
   );
 };
