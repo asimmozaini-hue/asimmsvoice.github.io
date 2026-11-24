@@ -6,6 +6,7 @@ import {MedgoFilm} from './medgo/MedgoFilm';
 import {CrashCourse2} from './cc2/CrashCourse2';
 import {PulseFilm} from './pulse/PulseFilm';
 import {EvacFilm} from './evac/EvacFilm';
+import {CarFilm} from './car/CarFilm';
 import {StationCaption} from './StationCaption';
 
 // 71s of scenes minus six 15-frame transitions.
@@ -18,6 +19,14 @@ export const RemotionRoot = () => (
       height={1920}
       fps={30}
       durationInFrames={2040}
+    />
+    <Composition
+      id="CarMG7"
+      component={CarFilm}
+      width={1080}
+      height={1920}
+      fps={30}
+      durationInFrames={660}
     />
     <Composition
       id="EvacuationDrill"

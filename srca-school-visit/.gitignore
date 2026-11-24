@@ -20,3 +20,5 @@ public/cc/stills
 public/story
 # Evacuation drill footage stays local
 public/evac
+# Personal car photos, footage and song stay local
+public/car
